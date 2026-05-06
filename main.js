@@ -53,4 +53,43 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
+
+    // Modal Logic
+    const modal = document.getElementById('tech-modal');
+    const modalViewer = document.getElementById('modal-viewer');
+    const modalTitle = document.getElementById('modal-title');
+    const techCards = document.querySelectorAll('.tech-card');
+    const closeBtn = document.querySelector('.close-modal');
+
+    techCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const fileName = card.getAttribute('data-file');
+            const title = card.querySelector('h4').innerText;
+            
+            modalTitle.innerText = title;
+            modalViewer.innerHTML = `<iframe src="${fileName}" type="application/pdf"></iframe>`;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        setTimeout(() => {
+            modalViewer.innerHTML = '';
+        }, 300);
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 });

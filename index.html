@@ -208,17 +208,17 @@
                 <p>펌프 유지관리에 필요한 기술 지침서 및 각종 인증서입니다.</p>
             </div>
             <div class="product-grid">
-                <div class="product-card" style="padding: 20px; text-align: center;">
+                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="펌프유지관리지침서/정량펌프 유지관리지침서.pdf">
                     <i class="fas fa-file-pdf fa-3x" style="color: #e74c3c; margin-bottom: 15px;"></i>
                     <h4>펌프 유지관리지침서</h4>
                     <p style="font-size: 0.9rem; margin-top: 10px;">부스터/수중/슬러지/정량펌프 등</p>
                 </div>
-                <div class="product-card" style="padding: 20px; text-align: center;">
+                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="홈페이지자료/KC인증서.pdf">
                     <i class="fas fa-certificate fa-3x" style="color: #f1c40f; margin-bottom: 15px;"></i>
                     <h4>인증 및 확인서</h4>
                     <p style="font-size: 0.9rem; margin-top: 10px;">ISO9001 / KC / MAIN-BIZ</p>
                 </div>
-                <div class="product-card" style="padding: 20px; text-align: center;">
+                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="지명원 (1).pdf">
                     <i class="fas fa-building fa-3x" style="color: #3498db; margin-bottom: 15px;"></i>
                     <h4>회사 지명원</h4>
                     <p style="font-size: 0.9rem; margin-top: 10px;">(주)비에이텍 기업 상세 프로필</p>
@@ -299,6 +299,19 @@
         <i class="fas fa-paper-plane"></i>
         <span class="tooltip">문의하기</span>
     </a>
+
+    <!-- Technical Resource Modal -->
+    <div id="tech-modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 id="modal-title">기술자료 보기</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-viewer">
+                <!-- PDF Viewer will be loaded here -->
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
