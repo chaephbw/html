@@ -3,106 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)비에이텍 - 워터펌프 전문기업</title>
-    <meta name="description" content="워터펌프 제작, 설치, 수리 전문기업 (주)비에이텍입니다.">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>E-Book PDF Reader</title>
+    <meta name="description" content="Experience realistic page-turning effects with this interactive E-Book Web Reader.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- PageFlip -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<수정>
-    <!-- Initial Load Popup (First Image) -->
-    <div id="initial-popup" class="modal-overlay active">
-        <div class="modal-content popup-content">
-            <button class="close-btn" id="close-initial-popup" aria-label="닫기">&times;</button>
-            <img src="./images/popup.jpg" alt="비에이텍 소개 팝업" id="popup-image" onerror="this.src='https://placehold.co/800x1200/ffffff/0056b3?text=첫번째+이미지+(소개+팝업)'">
-            <p class="popup-instruction">아무 곳이나 클릭하여 닫기</p>
-        </div>
+<밥>
+    <div class="bg-elements">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
-    <!-- Campaign Modal (Second Image) -->
-    <div id="campaign-modal" class="modal-overlay">
-        <div class="modal-content campaign-content">
-            <button class="close-btn" id="close-campaign-modal" aria-label="닫기">&times;</button>
-            <img src="./images/campaign.jpg" alt="비에이텍 캠페인" id="campaign-image" onerror="this.src='https://placehold.co/1200x800/ffffff/00a8ff?text=두번째+이미지+(캠페인)'">
-        </div>
+    <div class="container">
+        <header class="glass-panel text-center">
+            <h1 class="gradient-text">Interactive E-Book Reader</h1>
+            <p class="subtitle">Upload any PDF file to transform it into a beautiful, page-turning book.</p>
+            
+            <div class="upload-section">
+                <input type="file" id="pdf-upload" accept="application/pdf" class="hidden-input">
+                <label for="pdf-upload" class="upload-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    <span>Choose PDF File</span>
+                </label>
+                <div id="file-name" class="file-name"></div>
+            </div>
+            
+            <div id="loading" class="loading-container" style="display: none;">
+                <div class="spinner"></div>
+                <p id="loading-text">Processing your PDF...</p>
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+            </div>
+        </header>
+
+        <main id="book-area" style="display: none;">
+            <div class="book-controls glass-panel">
+                <button id="prev-btn" class="control-btn" aria-label="Previous Page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <span id="page-info" class="page-info">Page 1 of ?</span>
+                <button id="next-btn" class="control-btn" aria-label="Next Page">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+            
+            <div class="book-wrapper">
+                <div id="book">
+                    <!-- Pages go here -->
+                </div>
+            </div>
+            
+            <div class="book-instructions">
+                Drag the corners or click the edges to flip pages.
+            </div>
+        </main>
     </div>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1><a href="#">BIATECH <span>(주)비에이텍</span></a></h1>
-            </div>
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="#about">회사소개</a></li>
-                    <li><a href="#products">워터펌프 제작</a></li>
-                    <li><a href="#services">설치 및 수리</a></li>
-                    <li><a href="#" id="nav-campaign" class="highlight-menu">캠페인</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="animate-up">물의 흐름을 지배하는 기술</h2>
-            <p class="animate-up delay-1">최고의 품질과 혁신적인 기술로 워터펌프의 새로운 기준을 제시합니다.</p>
-            <div class="hero-buttons animate-up delay-2">
-                <a href="#services" class="btn btn-primary">서비스 보기</a>
-                <a href="#contact" class="btn btn-outline">상담 문의</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Our Expertise</h2>
-                <p>워터펌프의 모든 것, 비에이텍이 책임집니다.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box">⚙️</div>
-                    <h3>제작 및 생산</h3>
-                    <p>고효율, 친환경 기술을 적용한 최고 품질의 워터펌프를 자체 제작합니다.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box">🔧</div>
-                    <h3>전문 설치</h3>
-                    <p>현장 맞춤형 설계와 다년간의 노하우로 완벽하고 안전한 설치를 보장합니다.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box">🛠️</div>
-                    <h3>유지 및 수리</h3>
-                    <p>신속한 A/S 및 정기 점검 서비스로 펌프의 수명을 극대화합니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>(주)비에이텍</h3>
-                    <p>경기도 화성시 정남면 서봉로 XXX</p>
-                    <p>전화: 031-XXX-XXXX | 이메일: info@biatech.co.kr</p>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2026 BIATECH. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
