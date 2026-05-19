@@ -2508,6 +2508,230 @@ img {
 }
 
 /* ==========================================================================
+   Site Load Popup Modal Styling
+   ========================================================================== */
+.popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.popup-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-container {
+    width: 90%;
+    max-width: 500px;
+    background: var(--bg-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transform: translateY(40px) scale(0.95);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup-modal.show .popup-container {
+    transform: translateY(0) scale(1);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.popup-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+.popup-close-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.popup-body {
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+}
+
+.popup-checkbox-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.popup-checkbox-label input {
+    accent-color: var(--accent-color);
+}
+
+.popup-close-text-btn {
+    padding: 8px 18px;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.popup-close-text-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+/* ==========================================================================
+   Campaign Section Styling
+   ========================================================================== */
+.campaign-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.campaign-image-box {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--card-shadow);
+}
+
+.campaign-water-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(2, 6, 23, 0.8);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: floatEffect 4s ease-in-out infinite alternate;
+}
+
+.campaign-water-badge i {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.campaign-water-badge p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.campaign-text-side h3 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.4;
+    background: linear-gradient(90deg, #fff, #b2ebf2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.campaign-tips {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tip-item {
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    padding: 20px;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.tip-item:hover {
+    border-color: var(--glass-border-hover);
+    transform: translateY(-2px);
+}
+
+.tip-num {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-color);
+    font-family: 'Outfit', sans-serif;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 240, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tip-info h4 {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.tip-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* ==========================================================================
    Media Queries & Responsive Styling Adjustments
    ========================================================================== */
 @media (max-width: 1200px) {
@@ -2529,7 +2753,7 @@ img {
         display: flex;
     }
     
-    .teaser-grid, .ceo-grid, .map-grid, .product-detail-grid, .iso-showcase-grid, .direct-grid {
+    .teaser-grid, .ceo-grid, .map-grid, .product-detail-grid, .iso-showcase-grid, .direct-grid, .campaign-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
@@ -2542,7 +2766,7 @@ img {
         direction: ltr;
     }
     
-    .teaser-image-side, .product-image-side, .ceo-image, .cert-mockup-frame {
+    .teaser-image-side, .product-image-side, .ceo-image, .cert-mockup-frame, .campaign-image-side {
         max-width: 600px;
         margin: 0 auto;
         width: 100%;

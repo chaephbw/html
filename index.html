@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Site Load Popup Modal -->
+    <div id="popup-modal" class="popup-modal">
+        <div class="popup-container">
+            <div class="popup-header">
+                <button id="close-popup" class="popup-close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <img src="images/popup-image.png" alt="(주)비에이텍 공식 안내" class="popup-img">
+            </div>
+            <div class="popup-footer">
+                <label class="popup-checkbox-label">
+                    <input type="checkbox" id="today-close-chk"> <span>오늘 하루 이 창을 열지 않기</span>
+                </label>
+                <button id="close-popup-text" class="popup-close-text-btn">닫기</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Premium Glassmorphism Header -->
     <header class="header">
         <div class="container">
@@ -27,6 +45,7 @@
                     <li><a href="products.html">주요제품</a></li>
                     <li><a href="technology.html">기술 및 인증</a></li>
                     <li><a href="performance.html">사업실적</a></li>
+                    <li><a href="#campaign">캠페인</a></li>
                     <li><a href="support.html">고객지원</a></li>
                 </ul>
             </nav>
@@ -45,6 +64,7 @@
             <li><a href="products.html">주요제품</a></li>
             <li><a href="technology.html">기술 및 인증</a></li>
             <li><a href="performance.html">사업실적</a></li>
+            <li><a href="#campaign">캠페인</a></li>
             <li><a href="support.html">고객지원</a></li>
         </ul>
     </div>
@@ -64,7 +84,7 @@
             </h1>
             <p class="fade-in-up" style="animation-delay: 0.5s;">
                 워터펌프 제작 · 설치 · 수리 전문기업 <strong>(주)비에이텍</strong><br>
-                2010년부터 이어온 장인정신과 품질 우선주의로 공공 수자원 인프라를 선도합니다.
+                2010년부터 이어온 장인정신 and 품질 우선주의로 공공 수자원 인프라를 선도합니다.
             </p>
             <div class="hero-buttons fade-in-up" style="animation-delay: 0.7s;">
                 <a href="products.html" class="btn btn-primary">
@@ -196,7 +216,7 @@
                     <div class="card-body">
                         <span class="prod-category">Specialized Water Solution</span>
                         <h3>특수 · 산업용 펌프</h3>
-                        <p>정량 펌프, 수중 펌프, 오수/슬러지 펌프, 고압 부스터 펌프 등 용도에 최적화된 산업장비입니다.</p>
+                        <p>정량 펌프, 수중 펌프, 오수/슬러지 펌프, 고압 부스터 펌프 등 용도별 특장점을 설명합니다.</p>
                         <a href="products.html" class="learn-more">용도별 특장점 보기 <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -248,8 +268,57 @@
         </div>
     </section>
 
-    <!-- Section 4: Performance Teaser -->
-    <section class="teaser-section performance-teaser bg-surface-alt">
+    <!-- Section 4: Campaign Section (Water Drinking Campaign) -->
+    <section id="campaign" class="teaser-section campaign-section bg-surface-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">SOCIAL CAMPAIGN</span>
+                <h2>비에이텍과 함께 하는 <strong>물 마시기 캠페인</strong></h2>
+                <div class="title-bar center"></div>
+            </div>
+            
+            <div class="campaign-grid">
+                <div class="campaign-image-side">
+                    <div class="campaign-image-box">
+                        <img src="images/campaign-image.png" alt="비에이텍 물 마시기 캠페인" class="img-responsive rounded">
+                        <div class="campaign-water-badge">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <p>Healthy Habits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-text-side">
+                    <h3>생명과 직결되는 깨끗한 물, 올바른 건강 습관을 제안합니다.</h3>
+                    <p class="teaser-p">
+                        우리 몸의 약 70%를 구성하고 있는 물은 노폐물 배출, 체온 조절, 혈액 순환 등 핵심적인 대사 활동을 유지하는 생명의 에너지입니다. <strong>(주)비에이텍</strong>은 혁신 유체 제어 펌프 설계 기술을 활용해 언제 어디서나 가장 깨끗하고 안전한 물을 도시 곳곳에 공급하는 자부심을 지니고 있습니다.
+                    </p>
+                    <p class="teaser-p">
+                        우리가 전송하는 깨끗한 물 한 방울이 아이들의 밝은 미소와 맑은 지구 생태계를 건강하게 만드는 소중한 원동력입니다. 비에이텍이 선도하는 첨단 수자원 네트워크를 통해 안심하고 맑은 물을 섭취해 보십시오.
+                    </p>
+                    
+                    <div class="campaign-tips">
+                        <div class="tip-item">
+                            <span class="tip-num">01</span>
+                            <div class="tip-info">
+                                <h4>물의 소중함, 비에이텍이 지킵니다</h4>
+                                <p>친환경 고효율 수중 펌프와 완벽한 정수 가압 제어 시스템을 가동하여 가정의 수도꼭지까지 깨끗한 수자원을 손실 없이 안전하게 공급합니다.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-num">02</span>
+                            <div class="tip-info">
+                                <h4>생활 속 실천: 하루 물 8잔 마시기</h4>
+                                <p>일정한 간격으로 천천히 따뜻한 음용수를 섭취하는 습관은 피부 미용, 소화 증진, 면역 증대에 기여하는 가장 스마트한 건강 습관입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Performance Teaser -->
+    <section class="teaser-section performance-teaser">
         <div class="container">
             <div class="section-header text-center">
                 <span class="sub-title">BUSINESS PERFORMANCE</span>
@@ -297,7 +366,7 @@
         </div>
     </section>
 
-    <!-- Section 5: Customer Support Callout -->
+    <!-- Section 6: Customer Support Callout -->
     <section class="cta-section">
         <div class="cta-overlay"></div>
         <div class="container relative-z">
@@ -385,6 +454,41 @@
                     header.classList.remove('scrolled');
                 }
             });
+
+            // Popup Modal Logic (First Image)
+            const popupModal = document.getElementById('popup-modal');
+            const closePopupBtn = document.getElementById('close-popup');
+            const closePopupTextBtn = document.getElementById('close-popup-text');
+            const todayCloseChk = document.getElementById('today-close-chk');
+            
+            // Check localStorage
+            const popupHiddenDate = localStorage.getItem('popupHiddenDate');
+            const today = new Date().toDateString();
+            
+            if (popupModal && (popupHiddenDate !== today)) {
+                // Small delay for natural page load entrance
+                setTimeout(() => {
+                    popupModal.classList.add('show');
+                }, 500);
+            }
+            
+            function closePopup() {
+                if (todayCloseChk && todayCloseChk.checked) {
+                    localStorage.setItem('popupHiddenDate', today);
+                }
+                popupModal.classList.remove('show');
+            }
+            
+            if (closePopupBtn) closePopupBtn.addEventListener('click', closePopup);
+            if (closePopupTextBtn) closePopupTextBtn.addEventListener('click', closePopup);
+            
+            if (popupModal) {
+                popupModal.addEventListener('click', (e) => {
+                    if (e.target === popupModal) {
+                        closePopup();
+                    }
+                });
+            }
         });
     </script>
 </body>
