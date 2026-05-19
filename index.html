@@ -3,69 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Book PDF Reader</title>
-    <meta name="description" content="Experience realistic page-turning effects with this interactive E-Book Web Reader.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- PDF.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-    <!-- PageFlip -->
-    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <title>(주)비에이텍 - 워터펌프 제작 및 수리 전문</title>
+    <meta name="description" content="(주)비에이텍은 워터펌프 제작, 설치, 수리 전문기업입니다. 깨끗한 물을 위한 최상의 솔루션을 제공합니다.">
+    <!-- Modern Typography from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
-<밥>
-    <div class="bg-elements">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
-
-    <div class="container">
-        <header class="glass-panel text-center">
-            <h1 class="gradient-text">Interactive E-Book Reader</h1>
-            <p class="subtitle">Upload any PDF file to transform it into a beautiful, page-turning book.</p>
-            
-            <div class="upload-section">
-                <input type="file" id="pdf-upload" accept="application/pdf" class="hidden-input">
-                <label for="pdf-upload" class="upload-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                    <span>Choose PDF File</span>
-                </label>
-                <div id="file-name" class="file-name"></div>
+<body>
+    <!-- Premium Glassmorphism Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon">💧</span>
+                    <span class="logo-text">비에이텍</span>
+                </a>
             </div>
-            
-            <div id="loading" class="loading-container" style="display: none;">
-                <div class="spinner"></div>
-                <p id="loading-text">Processing your PDF...</p>
-                <div class="progress-bar">
-                    <div id="progress" class="progress"></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="intro.html">기업소개</a></li>
+                    <li><a href="product.html">주요제품</a></li>
+                    <li><a href="equipment.html">장비</a></li>
+                    <li><a href="sales.html">업력</a></li>
+                    <li><a href="map.html">찾아오시는 길</a></li>
+                    <li><a href="inquiry.html">문의</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dynamic Hero Section -->
+    <main class="hero">
+        <div class="hero-bg-wrapper">
+            <!-- Background image will be set via CSS -->
+            <div class="hero-image-overlay" id="hero-bg"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="badge fade-in-up" style="animation-delay: 0.1s;">WATER PUMP SPECIALIST</div>
+            <h1 class="fade-in-up" style="animation-delay: 0.3s;">
+                생명의 근원, <br>
+                <span class="highlight">깨끗한 물</span>을 만듭니다
+            </h1>
+            <p class="fade-in-up" style="animation-delay: 0.5s;">
+                워터펌프 제작 · 설치 · 수리 전문기업 <strong>(주)비에이텍</strong><br>
+                최고의 기술력으로 최상의 수자원 솔루션을 제공합니다.
+            </p>
+            <div class="hero-buttons fade-in-up" style="animation-delay: 0.7s;">
+                <a href="product.html" class="btn btn-primary">
+                    주요제품 보기 <span class="arrow">→</span>
+                </a>
+                <a href="inquiry.html" class="btn btn-secondary">상담 문의하기</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator fade-in-up" style="animation-delay: 1.2s;">
+            <span>Scroll Down</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sleek Modern Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💧</span> (주)비에이텍
+                    </div>
+                    <p class="footer-desc">깨끗한 물의 미래를 창조하는 워터펌프 전문기업</p>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">주소</span>
+                        <span class="contact-value">춘천시 ~~</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">전화</span>
+                        <span class="contact-value">~~~</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">팩스</span>
+                        <span class="contact-value">~~~</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">담당자 (이메일)</span>
+                        <span class="contact-value">~@~.~</span>
+                    </div>
                 </div>
             </div>
-        </header>
-
-        <main id="book-area" style="display: none;">
-            <div class="book-controls glass-panel">
-                <button id="prev-btn" class="control-btn" aria-label="Previous Page">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </button>
-                <span id="page-info" class="page-info">Page 1 of ?</span>
-                <button id="next-btn" class="control-btn" aria-label="Next Page">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-            </div>
             
-            <div class="book-wrapper">
-                <div id="book">
-                    <!-- Pages go here -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 (주)비에이텍. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
                 </div>
             </div>
-            
-            <div class="book-instructions">
-                Drag the corners or click the edges to flip pages.
-            </div>
-        </main>
-    </div>
-
-    <script src="./script.js"></script>
+        </div>
+    </footer>
 </body>
 </html>
