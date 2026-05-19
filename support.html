@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객지원 - (주)비에이텍</title>
+    <meta name="description" content="(주)비에이텍의 온라인 견적/기술 문의 및 펌프 카탈로그, 취급 매뉴얼 다운로드 서비스를 이용하세요.">
+    <!-- Modern Typography from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Premium Glassmorphism Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon">💧</span>
+                    <span class="logo-text">(주)비에이텍</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="company.html">기업소개</a></li>
+                    <li><a href="products.html">주요제품</a></li>
+                    <li><a href="technology.html">기술 및 인증</a></li>
+                    <li><a href="performance.html">사업실적</a></li>
+                    <li><a href="support.html" class="active">고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="company.html">기업소개</a></li>
+            <li><a href="products.html">주요제품</a></li>
+            <li><a href="technology.html">기술 및 인증</a></li>
+            <li><a href="performance.html">사업실적</a></li>
+            <li><a href="support.html" class="active">고객지원</a></li>
+        </ul>
+    </div>
+
+    <!-- Subpage Hero Banner -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="page-badge">CUSTOMER SUPPORT & RESOURCE</span>
+                <h1>고객지원</h1>
+                <p>펌프 선정, 정밀 견적 설계, 사후 기술 지원까지 가장 빠르고 명쾌하게 소통합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subpage Navigation Tabs -->
+    <div class="sub-tabs">
+        <div class="container">
+            <div class="tabs-wrapper">
+                <a href="#inquiry" class="tab-link active">온라인 견적 및 기술 문의</a>
+                <a href="#downloads" class="tab-link">기술 자료실 (Downloads)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Inquiry Form -->
+    <section id="inquiry" class="subpage-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">QUOTE & PRODUCT INQUIRY</span>
+                <h2>빠른 견적 및 <strong>기술 문의</strong></h2>
+                <div class="title-bar center"></div>
+                <p class="section-lead">문의 내용을 남겨주시면 춘천 퇴계공단 자사 공장의 담당 수석 설계 엔지니어가 접수 후 24시간 이내에 직접 유선 또는 이메일로 답변해 드립니다.</p>
+            </div>
+
+            <div class="inquiry-container">
+                <form id="batech-inquiry-form" class="inquiry-form" onsubmit="handleInquirySubmit(event)">
+                    <div class="form-grid">
+                        <!-- Input 1 -->
+                        <div class="form-group">
+                            <label for="company_name">회사명 / 기관명 <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-building form-icon"></i>
+                                <input type="text" id="company_name" required placeholder="예: (주)비에이건설 또는 춘천시청">
+                            </div>
+                        </div>
+
+                        <!-- Input 2 -->
+                        <div class="form-group">
+                            <label for="contact_name">담당자 성함 <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user form-icon"></i>
+                                <input type="text" id="contact_name" required placeholder="예: 홍길동 과장">
+                            </div>
+                        </div>
+
+                        <!-- Input 3 -->
+                        <div class="form-group">
+                            <label for="phone">연락처 <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone form-icon"></i>
+                                <input type="tel" id="phone" required placeholder="예: 010-1234-5678">
+                            </div>
+                        </div>
+
+                        <!-- Input 4 -->
+                        <div class="form-group">
+                            <label for="email">이메일 주소 <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope form-icon"></i>
+                                <input type="email" id="email" required placeholder="예: manager@company.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Radio Group for Categories -->
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label>문의 분야 선택 <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="inquiry_type" value="volute" checked>
+                                <span class="custom-radio"></span> 벌류트 펌프 제작/견적
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="inquiry_type" value="special">
+                                <span class="custom-radio"></span> 특수/수중/오수 펌프 견적
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="inquiry_type" value="repair">
+                                <span class="custom-radio"></span> 기존 펌프 노후 교체 및 수리
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="inquiry_type" value="other">
+                                <span class="custom-radio"></span> 기타 자료 요청 및 제휴
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Textarea Message -->
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label for="message">문의 세부 내용 <span class="required">*</span></label>
+                        <textarea id="message" required rows="6" placeholder="원하시는 펌프 사양(구경, 토출량, 양정 등)이나 현장 시공 여건, 개보수 필요 조건을 적어주시면 훨씬 상세한 맞춤 견적이 가능합니다."></textarea>
+                    </div>
+
+                    <!-- Checkbox for Privacy -->
+                    <div class="form-group privacy-checkbox" style="margin-top: 20px;">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="custom-checkbox"></span> 개인정보 수집 및 이용약관에 동의합니다. (필수)
+                        </label>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 35px;">
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            상담 신청서 접수하기 <span class="arrow">→</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Technical Downloads -->
+    <section id="downloads" class="subpage-section bg-surface-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">TECHNICAL REFERENCE ROOM</span>
+                <h2>기술 <strong>자료실</strong></h2>
+                <div class="title-bar center"></div>
+                <p class="section-lead">(주)비에이텍 제품의 상세 제원표가 담긴 종합 카탈로그 및 안전 시공을 위한 기술 지침 수리를 간편하게 PDF 문서로 확인하십시오.</p>
+            </div>
+
+            <div class="download-grid">
+                <!-- Doc 1 -->
+                <div class="download-card">
+                    <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="doc-info">
+                        <h4>(주)비에이텍 2026 종합 제품 카탈로그</h4>
+                        <p class="doc-meta">등록일: 2026.01 | 파일 크기: 42.5MB | 형식: PDF</p>
+                        <p class="doc-desc">벌류트, 수중, 부스터 등 당사 제조 전 기종의 수압 성능 커브도와 표준 구조 단면도가 상세히 첨부된 통합형 한글 카탈로그입니다.</p>
+                    </div>
+                    <a href="#" class="btn-download" onclick="mockDownload(event, '2026 종합 제품 카탈로그.pdf')">다운로드 <i class="fa-solid fa-circle-down"></i></a>
+                </div>
+
+                <!-- Doc 2 -->
+                <div class="download-card">
+                    <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="doc-info">
+                        <h4>벌류트 펌프 기초 시공 및 배관 설치 지침서</h4>
+                        <p class="doc-meta">등록일: 2025.10 | 파일 크기: 18.2MB | 형식: PDF</p>
+                        <p class="doc-desc">공공 정수장 및 일반 펌프실 기초 콘크리트 패드 방진 시공 및 흡입 배관 편심 에어 포켓 차단 설계 가이드 매뉴얼입니다.</p>
+                    </div>
+                    <a href="#" class="btn-download" onclick="mockDownload(event, '벌류트 펌프 배관 설치 지침서.pdf')">다운로드 <i class="fa-solid fa-circle-down"></i></a>
+                </div>
+
+                <!-- Doc 3 -->
+                <div class="download-card">
+                    <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="doc-info">
+                        <h4>수중 오폐수 슬러지 펌프 취급 설명서</h4>
+                        <p class="doc-meta">등록일: 2025.08 | 파일 크기: 12.8MB | 형식: PDF</p>
+                        <p class="doc-desc">하수처리장 및 오수 유입 펌프용 수중 펌프 가이드 레일 안착 방식, 이중 메카니컬 씰 기밀 점검 주기 등 수명 연장을 위한 필수 취급 지침서입니다.</p>
+                    </div>
+                    <a href="#" class="btn-download" onclick="mockDownload(event, '수중 오폐수 펌프 취급 설명서.pdf')">다운로드 <i class="fa-solid fa-circle-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Success Toast -->
+    <div id="toast" class="toast-message">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-text-box">
+                <h4>문의 접수 완료</h4>
+                <p>정상적으로 문의가 등록되었습니다. 엔지니어가 신속하게 연락드리겠습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sleek Modern Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💧</span> (주)비에이텍
+                    </div>
+                    <p class="footer-desc">
+                        워터펌프 제작, 설치, 수리 분야 최고의 동반자로서 맑고 깨끗한 물을 신뢰성 있게 전달하는 국가 대표 물 기술을 선도해 나갑니다.
+                    </p>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">본사 및 공장 주소</span>
+                        <span class="contact-value">강원특별자치도 춘천시 퇴계공단길 56 (퇴계공단 내)</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">전화번호</span>
+                        <span class="contact-value">033-250-XXXX (대표전화)</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">팩스번호</span>
+                        <span class="contact-value">033-250-YYYY</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">대표이사 / 담당자 이메일</span>
+                        <span class="contact-value">조세연 대표이사 | contact@batechpump.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 (주)비에이텍. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS for Toast Success Message and Mock Download alerts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+
+            // Active Sub-Tab Scrolling highlighted class
+            const tabs = document.querySelectorAll('.tab-link');
+            const sections = document.querySelectorAll('.subpage-section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('href').includes(current)) {
+                        tab.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Handle Inquiry Submission
+        function handleInquirySubmit(event) {
+            event.preventDefault();
+            
+            // Show toast message
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            // Reset form
+            document.getElementById('batech-inquiry-form').reset();
+            
+            // Hide toast after 4.5 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4500);
+        }
+
+        // Mock Download Trigger
+        function mockDownload(event, fileName) {
+            event.preventDefault();
+            alert(`[기술자료 다운로드 안내]\n\n'${fileName}'의 가상 다운로드가 시작되었습니다.\n실제 운영 시에는 해당 PDF 파일이 업로드된 실경로로 즉시 연동됩니다.`);
+        }
+    </script>
+</body>
+</html>

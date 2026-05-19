@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)비에이텍 - 워터펌프 제작 및 수리 전문</title>
-    <meta name="description" content="(주)비에이텍은 워터펌프 제작, 설치, 수리 전문기업입니다. 깨끗한 물을 위한 최상의 솔루션을 제공합니다.">
+    <title>(주)비에이텍 - 워터펌프 제작 · 설치 · 수리 전문기업</title>
+    <meta name="description" content="(주)비에이텍은 워터펌프 제작, 설치, 수리 전문기업입니다. 최고의 기술력과 신뢰를 바탕으로 최상의 수자원 솔루션을 제공합니다.">
     <!-- Modern Typography from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Premium Glassmorphism Header -->
@@ -16,17 +18,16 @@
             <div class="logo">
                 <a href="index.html">
                     <span class="logo-icon">💧</span>
-                    <span class="logo-text">비에이텍</span>
+                    <span class="logo-text">(주)비에이텍</span>
                 </a>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="intro.html">기업소개</a></li>
-                    <li><a href="product.html">주요제품</a></li>
-                    <li><a href="equipment.html">장비</a></li>
-                    <li><a href="sales.html">업력</a></li>
-                    <li><a href="map.html">찾아오시는 길</a></li>
-                    <li><a href="inquiry.html">문의</a></li>
+                    <li><a href="company.html">기업소개</a></li>
+                    <li><a href="products.html">주요제품</a></li>
+                    <li><a href="technology.html">기술 및 인증</a></li>
+                    <li><a href="performance.html">사업실적</a></li>
+                    <li><a href="support.html">고객지원</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-btn">
@@ -37,29 +38,39 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="company.html">기업소개</a></li>
+            <li><a href="products.html">주요제품</a></li>
+            <li><a href="technology.html">기술 및 인증</a></li>
+            <li><a href="performance.html">사업실적</a></li>
+            <li><a href="support.html">고객지원</a></li>
+        </ul>
+    </div>
+
     <!-- Dynamic Hero Section -->
-    <main class="hero">
+    <section class="hero">
         <div class="hero-bg-wrapper">
-            <!-- Background image will be set via CSS -->
-            <div class="hero-image-overlay" id="hero-bg"></div>
+            <div class="hero-image-overlay"></div>
             <div class="hero-gradient"></div>
         </div>
         
         <div class="hero-content">
-            <div class="badge fade-in-up" style="animation-delay: 0.1s;">WATER PUMP SPECIALIST</div>
+            <div class="badge fade-in-up" style="animation-delay: 0.1s;">💧 WATER PUMP SYSTEM LEADER</div>
             <h1 class="fade-in-up" style="animation-delay: 0.3s;">
-                생명의 근원, <br>
-                <span class="highlight">깨끗한 물</span>을 만듭니다
+                생명의 근원인 물,<br>
+                <span class="highlight">최고의 기술</span>로 통제합니다
             </h1>
             <p class="fade-in-up" style="animation-delay: 0.5s;">
                 워터펌프 제작 · 설치 · 수리 전문기업 <strong>(주)비에이텍</strong><br>
-                최고의 기술력으로 최상의 수자원 솔루션을 제공합니다.
+                2010년부터 이어온 장인정신과 품질 우선주의로 공공 수자원 인프라를 선도합니다.
             </p>
             <div class="hero-buttons fade-in-up" style="animation-delay: 0.7s;">
-                <a href="product.html" class="btn btn-primary">
-                    주요제품 보기 <span class="arrow">→</span>
+                <a href="products.html" class="btn btn-primary">
+                    제품 라인업 보기 <span class="arrow">→</span>
                 </a>
-                <a href="inquiry.html" class="btn btn-secondary">상담 문의하기</a>
+                <a href="support.html" class="btn btn-secondary">온라인 견적 문의</a>
             </div>
         </div>
 
@@ -69,7 +80,238 @@
                 <div class="wheel"></div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Quick Stats Grid (Trust Indicators) -->
+    <section class="quick-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-industry"></i></span>
+                    <div class="stat-info">
+                        <h3>설립연도</h3>
+                        <p class="stat-number">2010</p>
+                        <p class="stat-desc">춘천 퇴계공단 설립</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-gears"></i></span>
+                    <div class="stat-info">
+                        <h3>펌프 전문성</h3>
+                        <p class="stat-number">100%</p>
+                        <p class="stat-desc">자체 제작 및 책임시공</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-certificate"></i></span>
+                    <div class="stat-info">
+                        <h3>품질 인증</h3>
+                        <p class="stat-number">ISO 9001</p>
+                        <p class="stat-desc">경영시스템 검증 완료</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-building-shield"></i></span>
+                    <div class="stat-info">
+                        <h3>조달 적격</h3>
+                        <p class="stat-number">직접생산</p>
+                        <p class="stat-desc">공공조달 참여 자격 인증</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: About Company Teaser -->
+    <section class="teaser-section company-teaser">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">COMPANY PROFILE</span>
+                <h2>신뢰와 기술의 기업 <strong>(주)비에이텍</strong></h2>
+                <div class="title-bar"></div>
+            </div>
+            <div class="teaser-grid">
+                <div class="teaser-image-side">
+                    <div class="image-box">
+                        <img src="images/installation-site.png" alt="비에이텍 현장" class="img-responsive rounded">
+                        <div class="floating-badge">
+                            <strong>16+</strong>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="teaser-text-side">
+                    <h3>품질을 최우선으로, 고객의 신뢰를 기술로 보답합니다.</h3>
+                    <p class="teaser-p">
+                        (주)비에이텍은 2010년 11월 설립 이래 최고의 품질과 완벽한 시공력을 바탕으로 급수펌프, 배수펌프, 산업용 특수 펌프의 설계, 제작 및 설치 서비스를 공급해왔습니다.
+                    </p>
+                    <p class="teaser-p">
+                        특히 춘천 퇴계공단에 생산 라인을 갖추고 있으며, 강원권 지자체의 핵심 상수도 및 하수처리 설비를 성공적으로 완수하여 기술력을 공인받았습니다.
+                    </p>
+                    <ul class="key-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 조세연 대표이사의 품질 경영 철학</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 벤처기업 및 Main-Biz 인증의 기술 혁신 중소기업</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 철저한 유지보수와 신속한 A/S 시스템</li>
+                    </ul>
+                    <a href="company.html" class="btn-text">기업정보 및 연혁 보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Products Teaser -->
+    <section class="teaser-section products-teaser bg-surface-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">PRODUCT CATEGORIES</span>
+                <h2>비에이텍 대표 <strong>제품군</strong></h2>
+                <div class="title-bar center"></div>
+            </div>
+            
+            <div class="product-cards-grid">
+                <!-- Volute Pump -->
+                <div class="product-card-preview">
+                    <div class="card-image">
+                        <img src="images/volute-pump.png" alt="벌류트 펌프">
+                        <div class="card-overlay">
+                            <a href="products.html#volute" class="view-details-btn"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="prod-category">Standard Industrial Pump</span>
+                        <h3>벌류트 펌프 (Volute Pump)</h3>
+                        <p>단단/다단/양흡입/편흡입 등 고유 유체역학 설계를 적용한 고효율 펌프 라인업입니다.</p>
+                        <a href="products.html" class="learn-more">상세 사양 보기 <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Special Pump -->
+                <div class="product-card-preview">
+                    <div class="card-image">
+                        <img src="images/submersible-pump.png" alt="특수/산업용 펌프">
+                        <div class="card-overlay">
+                            <a href="products.html#special" class="view-details-btn"><i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="prod-category">Specialized Water Solution</span>
+                        <h3>특수 · 산업용 펌프</h3>
+                        <p>정량 펌프, 수중 펌프, 오수/슬러지 펌프, 고압 부스터 펌프 등 용도에 최적화된 산업장비입니다.</p>
+                        <a href="products.html" class="learn-more">용도별 특장점 보기 <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Technology & Certificates Teaser -->
+    <section class="teaser-section tech-teaser">
+        <div class="container">
+            <div class="teaser-grid reverse">
+                <div class="teaser-image-side">
+                    <div class="certs-preview-grid">
+                        <div class="cert-item-small">
+                            <i class="fa-solid fa-stamp cert-icon"></i>
+                            <h4>ISO 9001:2015</h4>
+                            <p>품질경영시스템 인증</p>
+                        </div>
+                        <div class="cert-item-small">
+                            <i class="fa-solid fa-lightbulb cert-icon"></i>
+                            <h4>벤처기업 확인</h4>
+                            <p>기술 혁신성 입증</p>
+                        </div>
+                        <div class="cert-item-small">
+                            <i class="fa-solid fa-chart-line cert-icon"></i>
+                            <h4>Main-Biz</h4>
+                            <p>경영혁신형 중소기업</p>
+                        </div>
+                        <div class="cert-item-small">
+                            <i class="fa-solid fa-clipboard-check cert-icon"></i>
+                            <h4>직접생산확인</h4>
+                            <p>공공 조달 적격 자격</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teaser-text-side">
+                    <span class="sub-title">TECHNOLOGY & CERTIFICATES</span>
+                    <h2>완벽한 품질을 증명하는 <strong>기술 인증서</strong></h2>
+                    <div class="title-bar"></div>
+                    <p class="teaser-p">
+                        (주)비에이텍은 엄격한 품질 표준인 ISO 9001:2015 경영시스템 인증을 획득하여 설계부터 사후 서비스까지 철저하게 관리하고 있습니다.
+                    </p>
+                    <p class="teaser-p">
+                        또한 국가 공인 벤처기업 및 메인비즈(Main-Biz) 지정을 통해 경영 혁신과 독보적인 기술 개발 능력을 공인받았습니다. 공공조달 시장 진입을 위한 직접생산확인증명서를 상시 보유하여 완벽한 신뢰도를 확보하고 있습니다.
+                    </p>
+                    <a href="technology.html" class="btn-text">인증현황 상세보기 <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Performance Teaser -->
+    <section class="teaser-section performance-teaser bg-surface-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">BUSINESS PERFORMANCE</span>
+                <h2>공공기관이 신뢰하는 <strong>검증된 납품 실적</strong></h2>
+                <div class="title-bar center"></div>
+            </div>
+
+            <div class="performance-summary">
+                <div class="perf-stats">
+                    <div class="perf-stat-box">
+                        <span class="counter">500+</span>
+                        <p>펌프 제작 및 납품 실적</p>
+                    </div>
+                    <div class="perf-stat-box">
+                        <span class="counter">30+</span>
+                        <p>지자체 파트너십</p>
+                    </div>
+                    <div class="perf-stat-box">
+                        <span class="counter">100%</span>
+                        <p>시공 하자율 0% 도전</p>
+                    </div>
+                </div>
+                
+                <div class="perf-list-preview">
+                    <h3>최근 주요 사업 실적</h3>
+                    <ul class="perf-mini-list">
+                        <li>
+                            <span class="perf-year">2024</span>
+                            <span class="perf-title">춘천시 소양정수장 송수 펌프 교체 및 배관 설치 공사</span>
+                        </li>
+                        <li>
+                            <span class="perf-year">2023</span>
+                            <span class="perf-title">홍천군 하수처리장 슬러지 펌프 설치 공사</span>
+                        </li>
+                        <li>
+                            <span class="perf-year">2023</span>
+                            <span class="perf-title">춘천 퇴계공단 가압 펌프장 부스터 펌프 시스템 보수</span>
+                        </li>
+                    </ul>
+                    <div class="text-center" style="margin-top: 30px;">
+                        <a href="performance.html" class="btn btn-secondary">전체 시공 및 실적 갤러리 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Customer Support Callout -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container relative-z">
+            <div class="cta-content text-center">
+                <span class="cta-sub">GET IN TOUCH</span>
+                <h2>워터펌프 설계부터 견적, 수리까지!<br>비에이텍 전문가가 즉시 상담해 드립니다.</h2>
+                <p>춘천 퇴계공단 공장에서 숙련된 엔지니어가 신속하게 대응합니다.</p>
+                <div class="cta-btns">
+                    <a href="support.html" class="btn btn-primary">견적 및 제품 문의하기</a>
+                    <a href="support.html#downloads" class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> 카탈로그 다운로드</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Sleek Modern Footer -->
     <footer class="footer">
@@ -79,25 +321,27 @@
                     <div class="footer-logo">
                         <span class="logo-icon">💧</span> (주)비에이텍
                     </div>
-                    <p class="footer-desc">깨끗한 물의 미래를 창조하는 워터펌프 전문기업</p>
+                    <p class="footer-desc">
+                        워터펌프 제작, 설치, 수리 분야 최고의 동반자로서 맑고 깨끗한 물을 신뢰성 있게 전달하는 국가 대표 물 기술을 선도해 나갑니다.
+                    </p>
                 </div>
                 
                 <div class="contact-details">
                     <div class="contact-item">
-                        <span class="contact-label">주소</span>
-                        <span class="contact-value">춘천시 ~~</span>
+                        <span class="contact-label">본사 및 공장 주소</span>
+                        <span class="contact-value">강원특별자치도 춘천시 퇴계공단길 56 (퇴계공단 내)</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">전화</span>
-                        <span class="contact-value">~~~</span>
+                        <span class="contact-label">전화번호</span>
+                        <span class="contact-value">033-250-XXXX (대표전화)</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">팩스</span>
-                        <span class="contact-value">~~~</span>
+                        <span class="contact-label">팩스번호</span>
+                        <span class="contact-value">033-250-YYYY</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">담당자 (이메일)</span>
-                        <span class="contact-value">~@~.~</span>
+                        <span class="contact-label">대표이사 / 담당자 이메일</span>
+                        <span class="contact-value">조세연 대표이사 | contact@batechpump.com</span>
                     </div>
                 </div>
             </div>
@@ -111,5 +355,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- Vanilla JS for Mobile Navigation & Interactive Effects -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+
+            // Close mobile nav when link is clicked
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                });
+            });
+
+            // Smooth header scroll effect
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
