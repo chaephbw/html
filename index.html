@@ -3,316 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)비에이텍 | 워터펌프 제작, 설치, 수리 전문기업</title>
-    <meta name="description" content="(주)비에이텍은 워터펌프 제작, 설치 및 수리 전문 기업입니다. 부스터펌프, 수중펌프, 슬러지펌프 등 다양한 펌프 솔루션을 제공합니다.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>(주)비에이텍 - 워터펌프 전문기업</title>
+    <meta name="description" content="워터펌프 제작, 설치, 수리 전문기업 (주)비에이텍입니다.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<수정>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">BA<span>TECH</span> (주)비에이텍</a>
-                <ul class="nav-links">
+<body>
+    <!-- Initial Load Popup (First Image) -->
+    <div id="initial-popup" class="modal-overlay active">
+        <div class="modal-content popup-content">
+            <button class="close-btn" id="close-initial-popup" aria-label="닫기">&times;</button>
+            <img src="./images/popup.jpg" alt="비에이텍 소개 팝업" id="popup-image" onerror="this.src='https://placehold.co/800x1200/ffffff/0056b3?text=첫번째+이미지+(소개+팝업)'">
+            <p class="popup-instruction">아무 곳이나 클릭하여 닫기</p>
+        </div>
+    </div>
+
+    <!-- Campaign Modal (Second Image) -->
+    <div id="campaign-modal" class="modal-overlay">
+        <div class="modal-content campaign-content">
+            <button class="close-btn" id="close-campaign-modal" aria-label="닫기">&times;</button>
+            <img src="./images/campaign.jpg" alt="비에이텍 캠페인" id="campaign-image" onerror="this.src='https://placehold.co/1200x800/ffffff/00a8ff?text=두번째+이미지+(캠페인)'">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><a href="#">BIATECH <span>(주)비에이텍</span></a></h1>
+            </div>
+            <nav class="nav-links">
+                <ul>
                     <li><a href="#about">회사소개</a></li>
-                    <li><a href="#products">제품소개</a></li>
-                    <li><a href="#maintenance">유지관리</a></li>
-                    <li><a href="#certs">기술인증</a></li>
-                    <li><a href="#resources">기술자료</a></li>
-                    <li><a href="#contact">고객지원</a></li>
+                    <li><a href="#products">워터펌프 제작</a></li>
+                    <li><a href="#services">설치 및 수리</a></li>
+                    <li><a href="#" id="nav-campaign" class="highlight-menu">캠페인</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>물과 기술의 완벽한 조화,<br>(주)비에이텍</h1>
-            <p>워터펌프 제작부터 설치, 전문적인 수리까지<br>신뢰와 기술로 보답하는 펌프 솔루션 파트너입니다.</p>
-            <a href="#contact" class="cta-button">문의하기</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>회사소개</h2>
-                <p>혁신적인 기술력과 성실함으로 신뢰받는 기업이 되겠습니다.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=2070" alt="공장 이미지" style="width:100%; border-radius:20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                </div>
-                <div class="about-text">
-                    <h3>최고의 펌프 기술 전문가 집단</h3>
-                    <p>(주)비에이텍은 펌프 분야의 풍부한 경험과 전문성을 바탕으로, 고객의 요구에 최적화된 맞춤형 솔루션을 제공합니다. 제작부터 유지보수까지 원스톱 서비스를 통해 고객의 소중한 자산을 지켜드립니다.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <h4>전문성</h4>
-                            <p>오랜 경력의 숙련된 엔지니어 보유</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>신속성</h4>
-                            <p>긴급 고장 발생 시 빠른 현장 대응</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>정밀함</h4>
-                            <p>최신 장비를 활용한 정밀 진단 및 수리</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>신뢰</h4>
-                            <p>철저한 사후 관리 서비스 제공</p>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="animate-up">물의 흐름을 지배하는 기술</h2>
+            <p class="animate-up delay-1">최고의 품질과 혁신적인 기술로 워터펌프의 새로운 기준을 제시합니다.</p>
+            <div class="hero-buttons animate-up delay-2">
+                <a href="#services" class="btn btn-primary">서비스 보기</a>
+                <a href="#contact" class="btn btn-outline">상담 문의</a>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- Services Section -->
+    <section id="services" class="services section">
         <div class="container">
-            <div class="section-title">
-                <h2>제품소개</h2>
-                <p>(주)비에이텍이 제공하는 다양한 산업용 펌프 라인업입니다.</p>
+            <div class="section-header text-center">
+                <h2>Our Expertise</h2>
+                <p>워터펌프의 모든 것, 비에이텍이 책임집니다.</p>
             </div>
-            <div class="product-grid">
-                <!-- Booster Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-industry fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>부스터펌프</h3>
-                        <p>고층 건물 및 아파트의 안정적인 급수를 위한 가압 펌프 시스템입니다.</p>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">⚙️</div>
+                    <h3>제작 및 생산</h3>
+                    <p>고효율, 친환경 기술을 적용한 최고 품질의 워터펌프를 자체 제작합니다.</p>
                 </div>
-                <!-- Submersible Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-water fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>수중펌프</h3>
-                        <p>배수, 토목공사, 농업용 등 수중 작업에 최적화된 고효율 펌프입니다.</p>
-                    </div>
+                <div class="service-card">
+                    <div class="icon-box">🔧</div>
+                    <h3>전문 설치</h3>
+                    <p>현장 맞춤형 설계와 다년간의 노하우로 완벽하고 안전한 설치를 보장합니다.</p>
                 </div>
-                <!-- Sludge Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-fill-drip fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>슬러지펌프</h3>
-                        <p>하수처리장 및 산업 현장의 고농도 슬러지 이송에 적합합니다.</p>
-                    </div>
-                </div>
-                <!-- Mono Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-gear fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>일축나사식 모노펌프</h3>
-                        <p>고점도 액체 및 민감한 유체의 정밀한 이송을 위한 펌프입니다.</p>
-                    </div>
-                </div>
-                <!-- Metering Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-flask fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>정량펌프</h3>
-                        <p>정확한 유량 제어가 필요한 화학 공정 및 수처리용 펌프입니다.</p>
-                    </div>
-                </div>
-                <!-- Volute Pump -->
-                <div class="product-card">
-                    <div class="product-img">
-                        <i class="fas fa-cog fa-4x" style="color: #ccc;"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>편흡입볼류트펌프</h3>
-                        <p>광범위한 용도로 사용되는 표준형 산업용 원심 펌프입니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Maintenance Section -->
-    <section id="maintenance" class="maintenance">
-        <div class="container">
-            <div class="section-title">
-                <h2>유지관리 및 수리</h2>
-                <p>체계적인 유지보수로 펌프의 수명을 연장하고 가동률을 극대화합니다.</p>
-            </div>
-            <div class="maintenance-grid">
-                <div class="m-item">
-                    <i class="fas fa-tools"></i>
-                    <h3>정기 점검</h3>
-                    <p>주기적인 현장 방문을 통한 고장 전조 증상 파악 및 예방 정비</p>
-                </div>
-                <div class="m-item">
-                    <i class="fas fa-faucet-drip"></i>
-                    <h3>누수 진단</h3>
-                    <p>정밀 측정 장비를 활용한 메카니컬 씰 및 패킹 누수 점검</p>
-                </div>
-                <div class="m-item">
-                    <i class="fas fa-vial"></i>
-                    <h3>부품 교체</h3>
-                    <p>순정 부품 사용으로 장비의 성능 유지 및 안정성 확보</p>
-                </div>
-                <div class="m-item">
-                    <i class="fas fa-headset"></i>
-                    <h3>긴급 출동</h3>
-                    <p>24시간 긴급 상황 대응 및 현장 복구 서비스</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Certifications -->
-    <section id="certs" class="certs">
-        <div class="container">
-            <div class="section-title">
-                <h2>기술인증</h2>
-                <p>(주)비에이텍의 검증된 기술력과 품질 관리 체계입니다.</p>
-            </div>
-            <div class="certs-slider">
-                <div class="cert-item">
-                    <div class="cert-icon">ISO 9001</div>
-                    <p>품질경영시스템인증</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">KC</div>
-                    <p>국가통합인증마크</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">MAIN-BIZ</div>
-                    <p>경영혁신형 중소기업</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Resources -->
-    <section id="resources" class="resources" style="background-color: var(--bg-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>기술자료 및 매뉴얼</h2>
-                <p>펌프 유지관리에 필요한 기술 지침서 및 각종 인증서입니다.</p>
-            </div>
-            <div class="product-grid">
-                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="펌프유지관리지침서/정량펌프 유지관리지침서.pdf">
-                    <i class="fas fa-file-pdf fa-3x" style="color: #e74c3c; margin-bottom: 15px;"></i>
-                    <h4>펌프 유지관리지침서</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">부스터/수중/슬러지/정량펌프 등</p>
-                </div>
-                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="홈페이지자료/KC인증서.pdf">
-                    <i class="fas fa-certificate fa-3x" style="color: #f1c40f; margin-bottom: 15px;"></i>
-                    <h4>인증 및 확인서</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">ISO9001 / KC / MAIN-BIZ</p>
-                </div>
-                <div class="product-card tech-card" style="padding: 20px; text-align: center; cursor: pointer;" data-file="지명원 (1).pdf">
-                    <i class="fas fa-building fa-3x" style="color: #3498db; margin-bottom: 15px;"></i>
-                    <h4>회사 지명원</h4>
-                    <p style="font-size: 0.9rem; margin-top: 10px;">(주)비에이텍 기업 상세 프로필</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>고객지원</h2>
-                <p>궁금하신 사항은 언제든지 문의해 주세요.</p>
-            </div>
-            <div class="about-grid">
-                <div class="contact-info">
-                    <div class="feature-item" style="margin-bottom: 20px;">
-                        <h4>주소</h4>
-                        <p>강원특별자치도 춘천시 퇴계공단2길 64</p>
-                    </div>
-                    <div class="feature-item" style="margin-bottom: 20px;">
-                        <h4>전화번호</h4>
-                        <p>033-264-9243</p>
-                    </div>
-                    <div class="feature-item" style="margin-bottom: 20px;">
-                        <h4>이메일</h4>
-                        <p>gwf0123@hanmail.net</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form style="display: grid; gap: 15px;">
-                        <input type="text" placeholder="성함/업체명" style="padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
-                        <input type="email" placeholder="이메일" style="padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
-                        <textarea placeholder="문의내용" rows="5" style="padding: 15px; border-radius: 8px; border: 1px solid #ddd;"></textarea>
-                        <button type="submit" class="cta-button" style="border: none; cursor: pointer;">문의 보내기</button>
-                    </form>
+                <div class="service-card">
+                    <div class="icon-box">🛠️</div>
+                    <h3>유지 및 수리</h3>
+                    <p>신속한 A/S 및 정기 점검 서비스로 펌프의 수명을 극대화합니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact" class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-info">
                     <h3>(주)비에이텍</h3>
-                    <p>전문적인 펌프 솔루션으로 미래를 함께합니다.</p>
-                    <p>대표전화: 033-264-9243 | 팩스: 033-264-9244</p>
+                    <p>경기도 화성시 정남면 서봉로 XXX</p>
+                    <p>전화: 031-XXX-XXXX | 이메일: info@biatech.co.kr</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">회사소개</a></li>
-                        <li><a href="#products">제품소개</a></li>
-                        <li><a href="#maintenance">유지관리</a></li>
-                        <li><a href="#contact">문의하기</a></li>
-                    </ul>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 BIATECH. All rights reserved.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>사업분야</h4>
-                    <ul>
-                        <li>워터펌프 제작</li>
-                        <li>산업용 펌프 설치</li>
-                        <li>전문 수리 및 유지보수</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2026 (주)비에이텍. All Rights Reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Sticky Contact -->
-    <a href="#contact" class="sticky-contact">
-        <i class="fas fa-paper-plane"></i>
-        <span class="tooltip">문의하기</span>
-    </a>
-
-    <!-- Technical Resource Modal -->
-    <div id="tech-modal" class="modal-overlay">
-        <div class="modal-window">
-            <div class="modal-header">
-                <h3 id="modal-title">기술자료 보기</h3>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body" id="modal-viewer">
-                <!-- PDF Viewer will be loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
