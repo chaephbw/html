@@ -165,4 +165,156 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // --- Water Campaign Calculator & Tracker (Campaign Page) ---
+  const calcForm = document.getElementById('water-calc-form');
+  const calcResultBox = document.getElementById('calc-result-box');
+  const calcResultVal = document.getElementById('calc-result-value');
+  const targetIntakeText = document.getElementById('target-intake-text');
+
+  let dailyGoalMl = 2000; // Default goal: 2000ml (8 glasses)
+  let currentIntakeMl = 0;
+  const glassVolumeMl = 250; // 1 glass = 250ml
+
+  if (calcForm && calcResultBox) {
+    calcForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const weightInput = document.getElementById('user-weight');
+      const weight = parseFloat(weightInput.value);
+
+      if (isNaN(weight) || weight <= 0) {
+        alert('올바른 체중을 입력해 주세요.');
+        return;
+      }
+
+      // Calculate water intake: Weight (kg) * 30 = recommended intake in ml
+      const recommendedMl = Math.round(weight * 30);
+      dailyGoalMl = recommendedMl;
+
+      calcResultVal.textContent = (recommendedMl / 1000).toFixed(1) + 'L';
+      calcResultBox.style.display = 'block';
+      calcResultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Update tracker goal text
+      if (targetIntakeText) {
+        targetIntakeText.textContent = (dailyGoalMl / 1000).toFixed(1) + 'L';
+      }
+      updateWaterTracker();
+    });
+  }
+
+  const btnAddWater = document.getElementById('btn-add-water');
+  const btnResetWater = document.getElementById('btn-reset-water');
+  const currentGlassesText = document.getElementById('current-glasses');
+  const currentVolumeText = document.getElementById('current-volume');
+  const waterLevelRect = document.getElementById('water-level-rect');
+  const targetIntakeSpan = document.getElementById('target-intake');
+
+  function updateWaterTracker() {
+    const glasses = Math.round(currentIntakeMl / glassVolumeMl);
+    if (currentGlassesText) currentGlassesText.textContent = glasses;
+    if (currentVolumeText) currentVolumeText.textContent = (currentIntakeMl / 1000).toFixed(2);
+    if (targetIntakeSpan) targetIntakeSpan.textContent = (dailyGoalMl / 1000).toFixed(1);
+
+    // Calculate percent
+    const percent = Math.min(100, Math.round((currentIntakeMl / dailyGoalMl) * 100));
+    
+    // Update SVG Water Level
+    // The SVG cup height is 120 (from y=30 to y=150)
+    // 0% water level -> y=150, height=0
+    // 100% water level -> y=30, height=120
+    if (waterLevelRect) {
+      const maxWaterHeight = 120;
+      const waterHeight = (percent / 100) * maxWaterHeight;
+      const waterY = 150 - waterHeight;
+      
+      waterLevelRect.setAttribute('height', waterHeight);
+      waterLevelRect.setAttribute('y', waterY);
+    }
+  }
+
+  if (btnAddWater) {
+    btnAddWater.addEventListener('click', () => {
+      currentIntakeMl += glassVolumeMl;
+      updateWaterTracker();
+      
+      // Floating water drop effect
+      createWaterDropEffect();
+    });
+  }
+
+  if (btnResetWater) {
+    btnResetWater.addEventListener('click', () => {
+      if (confirm('오늘의 마신 물 기록을 초기화하시겠습니까?')) {
+        currentIntakeMl = 0;
+        updateWaterTracker();
+      }
+    });
+  }
+
+  function createWaterDropEffect() {
+    const trackerDisplay = document.querySelector('.tracker-display');
+    if (!trackerDisplay) return;
+
+    const drop = document.createElement('div');
+    drop.className = 'floating-drop';
+    drop.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="#00A8FF" style="filter: drop-shadow(0 2px 4px rgba(0, 168, 255, 0.4));"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>`;
+    drop.style.position = 'absolute';
+    drop.style.left = '50%';
+    drop.style.top = '60%';
+    drop.style.transform = 'translate(-50%, -50%)';
+    drop.style.opacity = '1';
+    drop.style.pointerEvents = 'none';
+    drop.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+    drop.style.zIndex = '10';
+    
+    trackerDisplay.appendChild(drop);
+
+    setTimeout(() => {
+      drop.style.top = '15%';
+      drop.style.opacity = '0';
+      drop.style.transform = 'translate(-50%, -50%) scale(1.8)';
+    }, 50);
+
+    setTimeout(() => {
+      drop.remove();
+    }, 900);
+  }
+
+  // --- Campaign Lightbox Modal (Cardnews Zoom) ---
+  const cardnewsImg = document.getElementById('cardnews-main-image');
+  const cardnewsZoomBtn = document.getElementById('cardnews-zoom-trigger');
+  const lightbox = document.getElementById('campaign-lightbox');
+  const lightboxClose = document.getElementById('lightbox-close-btn');
+  const lightboxImg = document.getElementById('lightbox-image');
+
+  function openLightbox() {
+    if (lightbox && lightboxImg && cardnewsImg) {
+      lightboxImg.src = cardnewsImg.src;
+      lightboxImg.alt = cardnewsImg.alt;
+      lightbox.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeLightbox() {
+    if (lightbox) {
+      lightbox.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  if (cardnewsImg) cardnewsImg.addEventListener('click', openLightbox);
+  if (cardnewsZoomBtn) cardnewsZoomBtn.addEventListener('click', openLightbox);
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  // Initialize water tracker on load if elements exist
+  if (currentGlassesText) {
+    updateWaterTracker();
+  }
 });
