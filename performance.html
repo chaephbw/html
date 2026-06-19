@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="(주)비에이텍의 춘천시, 홍천군 등 강원권 지자체 상수도 대형 가압장 및 하수처리장 펌프 설치/수리 실적 데이터와 현장 시공 갤러리를 확인하세요.">
+  <title>사업실적 - (주)비에이텍</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- --- Header / Navigation --- -->
+  <header class="header" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" stroke-dasharray="15 5" />
+          <circle cx="50" cy="50" r="28" stroke-dasharray="5 2" />
+          <path d="M50,15 L50,35 M50,65 L50,85 M15,50 L35,50 M65,50 L85,50" />
+          <circle cx="50" cy="50" r="10" fill="currentColor" />
+        </svg>
+        <span>(주)비에이텍</span>
+      </a>
+      
+      <nav class="nav-menu" id="header-nav-menu">
+        <div class="nav-item"><a href="index.html" class="nav-link" id="nav-home">홈</a></div>
+        <div class="nav-item"><a href="company.html" class="nav-link" id="nav-company">회사소개</a></div>
+        <div class="nav-item"><a href="products.html" class="nav-link" id="nav-products">제품안내</a></div>
+        <div class="nav-item"><a href="technology.html" class="nav-link" id="nav-tech">기술 및 인증</a></div>
+        <div class="nav-item active"><a href="performance.html" class="nav-link" id="nav-perf">사업실적</a></div>
+        <div class="nav-item"><a href="campaign.html" class="nav-link" id="nav-campaign">캠페인</a></div>
+        <div class="nav-item"><a href="support.html" class="nav-link" id="nav-support">고객지원</a></div>
+        <a href="support.html#inquiry-form-section" class="nav-cta" id="nav-cta-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          온라인 견적 문의
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="메뉴 열기/닫기" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Page Cover --- -->
+  <section class="section" style="padding: 140px 0 60px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%); color: var(--text-light); text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 12px;">사업실적</h1>
+      <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.15rem; max-width: 600px; margin: 0 auto;">수자원 분야 공공조달 납품 실적과 완벽한 정밀 시공으로 증명된 B-Tech의 사업 기록입니다.</p>
+    </div>
+  </section>
+
+  <!-- --- Major Performance List & Search --- -->
+  <section class="section section-white" id="perf-list-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Project Track Record</span>
+        <h2 class="section-title" id="perf-title">주요 사업 납품 및 보수 실적</h2>
+        <p class="section-desc">강원특별자치도 주요 지자체 및 수도사업소와의 공공조달 설치 실적입니다. 실시간 검색과 필터를 통해 필요한 실적을 찾아보세요.</p>
+      </div>
+
+      <!-- Table Search and Control Panel -->
+      <div class="perf-table-box" id="perf-records-container">
+        <div class="perf-controls">
+          <div class="perf-search">
+            <input type="text" id="perf-search-input" placeholder="발주처 또는 사업명 검색...">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          
+          <div class="perf-filters">
+            <select class="perf-filter-select" id="filter-region" aria-label="지역별 필터">
+              <option value="all">전체 지역</option>
+              <option value="chuncheon">춘천시</option>
+              <option value="hongcheon">홍천군</option>
+              <option value="hwacheon">화천군</option>
+              <option value="other">기타</option>
+            </select>
+            
+            <select class="perf-filter-select" id="filter-category" aria-label="분류별 필터">
+              <option value="all">전체 분류</option>
+              <option value="govt">공공 조달</option>
+              <option value="corp">민수/기업</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="table-perf" id="performance-table" summary="연도, 발주처, 사업명, 규격/수량, 납품 구분 등 사업 실적 목록">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 10%;">연도</th>
+              <th scope="col" style="width: 25%;">발주처</th>
+              <th scope="col" style="width: 35%;">사업명</th>
+              <th scope="col" style="width: 20%;">펌프 설치 사양</th>
+              <th scope="col" style="width: 10%;">납품 구분</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-region="chuncheon" data-category="govt">
+              <td><strong>2026</strong></td>
+              <td>춘천시 상하수도사업소</td>
+              <td>퇴계 배수 가압장 송수 펌프 개보수 및 교체공사</td>
+              <td>다단 벌류트 150HP 2대</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+            <tr data-region="hongcheon" data-category="govt">
+              <td><strong>2025</strong></td>
+              <td>홍천군 환경수도사업소</td>
+              <td>북방면 상수원 취수 펌프장 인버터 가압 시스템 설치</td>
+              <td>부스터 펌프 시스템 4연식</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+            <tr data-region="chuncheon" data-category="corp">
+              <td><strong>2025</strong></td>
+              <td>퇴계산업단지 협의회</td>
+              <td>공용 폐수 종말 처리장 메인 오수 송출 펌프 정비 수리</td>
+              <td>수중 슬러지 펌프 75HP 3대</td>
+              <td><span class="perf-badge corp">민수/기업</span></td>
+            </tr>
+            <tr data-region="hwacheon" data-category="govt">
+              <td><strong>2024</strong></td>
+              <td>화천군 상하수도사업소</td>
+              <td>상리 정수장 정화 약품 정밀 투입기 교체 시공</td>
+              <td>다이아프램 정량 펌프 6대</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+            <tr data-region="chuncheon" data-category="govt">
+              <td><strong>2024</strong></td>
+              <td>한국수자원공사 강원본부</td>
+              <td>소양강 지구 광역 도수 가압장 양흡입 임펠러 정밀 해체수리</td>
+              <td>양흡입 벌류트 300HP 수리</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+            <tr data-region="hongcheon" data-category="govt">
+              <td><strong>2023</strong></td>
+              <td>홍천군 환경수도사업소</td>
+              <td>갈마곡리 상하수 유체 제어 배출 밸브 및 가압 펌프 증설</td>
+              <td>단단 편흡입 50HP 4대</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+            <tr data-region="other" data-category="corp">
+              <td><strong>2022</strong></td>
+              <td>강원 한우 가공 유통 센터</td>
+              <td>육가공 처리 공정 위생 가압용 중온 부스터 펌프 제작 설치</td>
+              <td>순환형 부스터 펌프 2대</td>
+              <td><span class="perf-badge corp">민수/기업</span></td>
+            </tr>
+            <tr data-region="chuncheon" data-category="govt">
+              <td><strong>2021</strong></td>
+              <td>춘천시청 소방안전과</td>
+              <td>중앙 전통시장 화재 안전용 소방 비상 가압 양수 펌프 공급</td>
+              <td>고압 다단 벌류트 1대</td>
+              <td><span class="perf-badge govt">공공 조달</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Data Visualization Section --- -->
+  <section class="section section-light" id="visualization-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Performance Chart</span>
+        <h2 class="section-title" id="chart-title">연도별 펌프 출하 및 공급 실적 통계</h2>
+        <p class="section-desc">매년 품질 개선과 납품처 다변화를 이룩하며 지속적 성장을 거두고 있는 비에이텍의 출하 데이터입니다. (단위: 대)</p>
+      </div>
+
+      <!-- CSS/SVG Double Bar Column Chart -->
+      <div class="chart-box" id="delivery-stats-chart">
+        <div class="chart-header">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark);">공급 채널별 연도별 출하량</h3>
+          <div class="chart-legend">
+            <div class="legend-item"><span class="legend-color legend-primary"></span>공공 조달 (Govt)</div>
+            <div class="legend-item"><span class="legend-color legend-accent"></span>민수/기업 (Private)</div>
+          </div>
+        </div>
+
+        <div class="chart-container" id="bar-chart-body">
+          <div class="chart-axis-y">
+            <span>200</span>
+            <span>150</span>
+            <span>100</span>
+            <span>50</span>
+            <span>0</span>
+          </div>
+          
+          <!-- 2021 -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 48%;" data-value="96"></div>
+              <div class="chart-bar accent" style="height: 18%;" data-value="36"></div>
+            </div>
+            <div class="chart-label-x">2021년</div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 54%;" data-value="108"></div>
+              <div class="chart-bar accent" style="height: 21%;" data-value="42"></div>
+            </div>
+            <div class="chart-label-x">2022년</div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 62%;" data-value="124"></div>
+              <div class="chart-bar accent" style="height: 25%;" data-value="50"></div>
+            </div>
+            <div class="chart-label-x">2023년</div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 71%;" data-value="142"></div>
+              <div class="chart-bar accent" style="height: 31%;" data-value="62"></div>
+            </div>
+            <div class="chart-label-x">2024년</div>
+          </div>
+
+          <!-- 2025 -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 84%;" data-value="168"></div>
+              <div class="chart-bar accent" style="height: 36%;" data-value="72"></div>
+            </div>
+            <div class="chart-label-x">2025년</div>
+          </div>
+
+          <!-- 2026 (Projected/Current) -->
+          <div class="chart-bar-col">
+            <div class="chart-bar-group">
+              <div class="chart-bar main" style="height: 95%;" data-value="190"></div>
+              <div class="chart-bar accent" style="height: 44%;" data-value="88"></div>
+            </div>
+            <div class="chart-label-x">2026년 (예상)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- On-Site Installation Gallery Section --- -->
+  <section class="section section-white" id="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">On-Site Gallery</span>
+        <h2 class="section-title" id="gallery-title">실제 시공 및 정비 현장 갤러리</h2>
+        <p class="section-desc">비에이텍의 현장 전문 엔지니어들이 시공한 수자원 공급 펌프 스테이션의 내부 3D 가상 현장 설계도 및 배관 설치 모습입니다.</p>
+      </div>
+
+      <div class="gallery-grid" id="showroom-gallery-grid">
+        <!-- Site 1 -->
+        <div class="gallery-card" id="gallery-site1">
+          <div class="gallery-img-box">
+            <!-- SVG Drawing of Piping Network / Pump Room -->
+            <svg class="gallery-svg" viewBox="0 0 300 200" preserveAspectRatio="none" aria-label="상수도 가압장 펌프 공급 라인">
+              <rect width="300" height="200" fill="#0A3D62" />
+              <!-- Technical structural grid overlay -->
+              <g stroke="rgba(255, 255, 255, 0.1)" stroke-width="1">
+                <line x1="0" y1="50" x2="300" y2="50" />
+                <line x1="0" y1="100" x2="300" y2="100" />
+                <line x1="0" y1="150" x2="300" y2="150" />
+                <line x1="75" y1="0" x2="75" y2="200" />
+                <line x1="150" y1="0" x2="150" y2="200" />
+                <line x1="225" y1="0" x2="225" y2="200" />
+              </g>
+              <!-- Multi-pump manifolds -->
+              <rect x="30" y="80" width="240" height="40" rx="8" fill="#3C6382" stroke="#00D2D3" stroke-width="2" />
+              <!-- Pump connections -->
+              <rect x="70" y="40" width="30" height="80" rx="4" fill="#072A43" stroke="#00A8FF" stroke-width="2" />
+              <rect x="135" y="40" width="30" height="80" rx="4" fill="#072A43" stroke="#00A8FF" stroke-width="2" />
+              <rect x="200" y="40" width="30" height="80" rx="4" fill="#072A43" stroke="#00A8FF" stroke-width="2" />
+              <!-- Pressure Gauges -->
+              <circle cx="150" cy="30" r="10" fill="#00D2D3" />
+              <line x1="150" y1="30" x2="155" y2="25" stroke="#ffffff" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <div class="gallery-location">춘천시 퇴계동</div>
+            <h4 class="gallery-title">퇴계 배수 가압장 펌프 룸</h4>
+            <p class="gallery-desc">3단 병렬 150HP 다단 펌프 가속 구동 조절 스테이션 전경 시공도.</p>
+          </div>
+        </div>
+
+        <!-- Site 2 -->
+        <div class="gallery-card" id="gallery-site2">
+          <div class="gallery-img-box">
+            <!-- SVG Drawing of Waterworks piping layout -->
+            <svg class="gallery-svg" viewBox="0 0 300 200" preserveAspectRatio="none" aria-label="취수장 취수 매니폴드 및 유량 밸브 시스템">
+              <rect width="300" height="200" fill="#1E272E" />
+              <!-- Tech grids -->
+              <circle cx="150" cy="100" r="80" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.5" />
+              <!-- Pipes crossing -->
+              <path d="M50,200 L50,120 Q50,70 100,70 L250,70" fill="none" stroke="#27ae60" stroke-width="14" stroke-linecap="round" />
+              <path d="M250,200 L250,140 Q250,90 200,90 L50,90" fill="none" stroke="#2980b9" stroke-width="10" stroke-linecap="round" />
+              <!-- Valves and Handwheels -->
+              <circle cx="170" cy="70" r="16" fill="#e74c3c" />
+              <circle cx="130" cy="90" r="12" fill="#f1c40f" />
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <div class="gallery-location">홍천군 북방면</div>
+            <h4 class="gallery-title">상수 취수 펌프 및 배관</h4>
+            <p class="gallery-desc">하천수 유도 취수를 위한 대형 양흡입 펌프용 밸브 매니폴드 배치.</p>
+          </div>
+        </div>
+
+        <!-- Site 3 -->
+        <div class="gallery-card" id="gallery-site3">
+          <div class="gallery-img-box">
+            <!-- SVG Drawing of Wastewater treatment tank connection -->
+            <svg class="gallery-svg" viewBox="0 0 300 200" preserveAspectRatio="none" aria-label="폐수종말처리장 오수 슬러지 펌핑 피트">
+              <rect width="300" height="200" fill="#072A43" />
+              <!-- Liquid representation -->
+              <rect x="0" y="120" width="300" height="80" fill="#1E272E" opacity="0.8" />
+              <!-- Submerged Pump models -->
+              <rect x="80" y="100" width="40" height="60" rx="3" fill="#2C3E50" stroke="#00D2D3" stroke-width="1.5" />
+              <rect x="180" y="100" width="40" height="60" rx="3" fill="#2C3E50" stroke="#00D2D3" stroke-width="1.5" />
+              <!-- Guide rails -->
+              <line x1="90" y1="20" x2="90" y2="180" stroke="#bdc3c7" stroke-width="2" />
+              <line x1="210" y1="20" x2="210" y2="180" stroke="#bdc3c7" stroke-width="2" />
+              <!-- Lifting chains -->
+              <line x1="100" y1="20" x2="100" y2="100" stroke="#e67e22" stroke-width="1" stroke-dasharray="4 2" />
+            </svg>
+          </div>
+          <div class="gallery-info">
+            <div class="gallery-location">춘천 퇴계공단</div>
+            <h4 class="gallery-title">종말처리장 수중 오수 펌프</h4>
+            <p class="gallery-desc">탈부착 가이드레일을 결합한 수중 논클로그 슬러지 탈수 펌프조.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About B-Tech -->
+        <div class="footer-info-col" id="footer-about">
+          <h3>
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke-dasharray="10 5" />
+              <path d="M50,15 L50,85 M15,50 L85,50" />
+            </svg>
+            (주)비에이텍
+          </h3>
+          <p>
+            (주)비에이텍은 다년간 축적된 숙련된 엔지니어링 기술력과 엄격한 ISO 품질경영 매뉴얼을 바탕으로 최상급 워터 펌프 제작, 설치, 수리 정비를 담당하는 공공 조달 강소기업입니다.
+          </p>
+          <div class="footer-socials" id="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="블로그"><svg viewBox="0 0 24 24"><path d="M2 12a10 10 0 1 1 10 10A10 10 0 0 1 2 12zm10-5v10m-5-5h10"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="유튜브"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-links-col" id="footer-sitemap">
+          <h4>사이트맵</h4>
+          <ul class="footer-links-list">
+            <li><a href="company.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>회사소개</a></li>
+            <li><a href="products.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>제품안내</a></li>
+            <li><a href="technology.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>기술 및 인증</a></li>
+            <li><a href="performance.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>사업실적</a></li>
+            <li><a href="campaign.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>캠페인</a></li>
+            <li><a href="support.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>고객지원</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-contact-col" id="footer-contact-details">
+          <h4>고객센터 및 오시는 길</h4>
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>강원특별자치도 춘천시 퇴계공단 2길 64 (주)비에이텍</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>대표전화: 033-264-9243 | 팩스: 033-251-5747</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>이메일: contact@batechpump.co.kr</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>상담 가능 시간: 평일 09:00 ~ 18:00 (토/일, 공휴일 휴무)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="footer-base">
+        <div>&copy; 2026 (주)비에이텍. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="company.html#location-section">오시는 길</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

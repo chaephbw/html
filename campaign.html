@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="(주)비에이텍과 함께하는 건강한 물 마시기 캠페인. 워터펌프 제작, 설치, 수리 전문 기술로 깨끗한 수자원 인프라를 지키는 비에이텍이 올바른 수분 섭취 습관을 응원합니다.">
+  <title>(주)비에이텍 - 물 마시기 캠페인</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- --- Header / Navigation --- -->
+  <header class="header" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" stroke-dasharray="15 5" />
+          <circle cx="50" cy="50" r="28" stroke-dasharray="5 2" />
+          <path d="M50,15 L50,35 M50,65 L50,85 M15,50 L35,50 M65,50 L85,50" />
+          <circle cx="50" cy="50" r="10" fill="currentColor" />
+        </svg>
+        <span>(주)비에이텍</span>
+      </a>
+      
+      <nav class="nav-menu" id="header-nav-menu">
+        <div class="nav-item"><a href="index.html" class="nav-link" id="nav-home">홈</a></div>
+        <div class="nav-item"><a href="company.html" class="nav-link" id="nav-company">회사소개</a></div>
+        <div class="nav-item"><a href="products.html" class="nav-link" id="nav-products">제품안내</a></div>
+        <div class="nav-item"><a href="technology.html" class="nav-link" id="nav-tech">기술 및 인증</a></div>
+        <div class="nav-item"><a href="performance.html" class="nav-link" id="nav-perf">사업실적</a></div>
+        <div class="nav-item active"><a href="campaign.html" class="nav-link" id="nav-campaign">캠페인</a></div>
+        <div class="nav-item"><a href="support.html" class="nav-link" id="nav-support">고객지원</a></div>
+        <a href="support.html#inquiry-form-section" class="nav-cta" id="nav-cta-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          온라인 견적 문의
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="메뉴 열기/닫기" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Campaign Hero Section --- -->
+  <section class="campaign-hero" id="campaign-hero-banner">
+    <div class="hero-bg-waves">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    
+    <div class="container campaign-hero-content">
+      <span class="hero-tag" id="campaign-badge">Health & Tech Campaign</span>
+      <h1 class="campaign-hero-title" id="campaign-heading">
+        깨끗한 물, 건강한 일상<br>
+        <span>비에이텍 물 마시기 캠페인</span>
+      </h1>
+      <p class="campaign-hero-desc" id="campaign-description">
+        (주)비에이텍은 최고의 워터펌프 제작 및 관리 기술로 언제나 깨끗하고 안전한 물이 우리의 일상에 안정적으로 흐를 수 있도록 든든하게 받쳐줍니다. 수자원의 가치를 수호하는 비에이텍이 건강한 삶을 위한 올바른 물 마시기 습관을 제안합니다.
+      </p>
+      <div class="hero-buttons" style="justify-content: center;">
+        <a href="#cardnews-view-section" class="btn btn-primary" id="btn-scroll-campaign">
+          캠페인 카드뉴스 보기
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </a>
+        <a href="#water-challenge-section" class="btn btn-secondary" id="btn-scroll-tracker">물 마시기 챌린지 참여</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Cardnews Section --- -->
+  <section class="cardnews-section" id="cardnews-view-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" id="cardnews-subtitle">WATER EDUCATION</span>
+        <h2 class="section-title" id="cardnews-title">한 눈에 보는 물 마시기 카드뉴스</h2>
+        <p class="section-desc" id="cardnews-desc">비에이텍의 정밀 수처리 및 펌프 기술이 약속하는 신뢰할 수 있는 물 이야기와 우리 몸의 수분 섭취 가이드라인을 소개합니다.</p>
+      </div>
+
+      <div class="cardnews-container">
+        <!-- Cardnews Image Viewer -->
+        <div class="cardnews-viewer" id="cardnews-visual-container">
+          <img src="카드뉴스.png" alt="(주)비에이텍 물 마시기 캠페인 카드뉴스" class="cardnews-main-img" id="cardnews-main-image" onerror="this.src='https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=1200'; this.alt='대체 물 이미지(카드뉴스 파일 누락 시)';">
+          <div>
+            <button class="cardnews-zoom-badge" id="cardnews-zoom-trigger">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              카드뉴스 크게 보기 (원본 확대)
+            </button>
+          </div>
+        </div>
+
+        <!-- HTML representation of 4 Cardnews Panels -->
+        <div class="card-info-grid" id="cardnews-panels-info">
+          <!-- Card 01 -->
+          <div class="info-card" id="info-card-1">
+            <div class="info-card-num">01</div>
+            <h3 class="info-card-title">물의 소중함,<br>비에이텍이 지킵니다.</h3>
+            <p class="info-card-desc">
+              깨끗한 물은 우리의 삶을 윤택하게 만들고 생명을 지속시키는 가장 중요한 기본 요소입니다. (주)비에이텍의 앞선 워터펌프 제작/설치 기술로 한 방울의 물도 안전하고 소중하게 여러분의 일상까지 닿도록 끊임없이 연구합니다.
+            </p>
+            <div class="info-card-tags">
+              <span class="info-card-tag">#물의소중함</span>
+              <span class="info-card-tag">#정밀펌프기술</span>
+              <span class="info-card-tag">#생명수수호</span>
+            </div>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="info-card" id="info-card-2">
+            <div class="info-card-num">02</div>
+            <h3 class="info-card-title">안정적인 공급으로<br>도시를 움직입니다.</h3>
+            <p class="info-card-desc">
+              단 한 순간의 물 멈춤도 없이 도시 전체가 활력 있게 살아 숨 쉬도록, 비에이텍의 첨단 가압 펌프장 및 급수 제어 펌프 시스템이 도심 구석구석에 있는 배수지와 상수도관까지 정밀하고 일정한 압력으로 깨끗한 수자원을 안정적으로 유통합니다.
+            </p>
+            <div class="info-card-tags">
+              <span class="info-card-tag">#안정적급수</span>
+              <span class="info-card-tag">#가압펌프장</span>
+              <span class="info-card-tag">#도시인프라</span>
+            </div>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="info-card" id="info-card-3">
+            <div class="info-card-num">03</div>
+            <h3 class="info-card-title">혁신적인 기술로<br>물을 스마트하게 관리합니다.</h3>
+            <p class="info-card-desc">
+              IoT 기반 스마트 제어 솔루션과 24시간 실시간 정밀 원격 제어 모니터링 시스템을 융합하여 유량과 압력을 최적화합니다. 데이터 기반 이상 징후 조기 진단 및 자동 알람 시스템으로 환경오염이나 손실 없이 안전한 유량을 유지합니다.
+            </p>
+            <div class="info-card-tags">
+              <span class="info-card-tag">#스마트수처리</span>
+              <span class="info-card-tag">#원격제어</span>
+              <span class="info-card-tag">#데이터관리</span>
+            </div>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="info-card" id="info-card-4">
+            <div class="info-card-num">04</div>
+            <h3 class="info-card-title">미래 세대를 위한 깨끗한 물,<br>비에이텍과 함께.</h3>
+            <p class="info-card-desc">
+              오늘 우리가 지켜낸 맑고 깨끗한 수자원은 자라나는 우리 아이들에게 물려줄 최고의 천연 유산입니다. 친환경 설계 및 고효율 펌프 생산 공정으로 온실가스를 저감하고, 물 순환 생태계를 복원하여 지구의 밝은 내일을 앞장서 열어갑니다.
+            </p>
+            <div class="info-card-tags">
+              <span class="info-card-tag">#친환경펌프</span>
+              <span class="info-card-tag">#미래세대공헌</span>
+              <span class="info-card-tag">#지속가능한개발</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Interactive Water Challenge Section --- -->
+  <section class="challenge-section" id="water-challenge-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" id="challenge-subtitle">DAILY WATER CHALLENGE</span>
+        <h2 class="section-title" id="challenge-title">비에이텍 물 마시기 습관 만들기</h2>
+        <p class="section-desc" id="challenge-desc">충분한 수분 섭취는 피로 해소와 활력 증진에 탁월합니다. 내 몸에 필요한 맞춤 수분 섭취량을 계산하고 일일 물 마시기 목표를 달성해보세요!</p>
+      </div>
+
+      <div class="challenge-grid">
+        <!-- Weight Intake Calculator -->
+        <div class="calculator-card" id="water-calculator">
+          <h3 class="calc-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
+            하루 권장 수분 섭취량 계산기
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">우리 몸은 하루 동안 생물학적으로 체중에 비례하는 수분을 소모합니다. 본인의 체중을 입력하시면 과학적으로 권장하는 정확한 일일 수분 섭취 기준량을 제공해 드립니다.</p>
+          <form id="water-calc-form">
+            <div class="calc-form-group">
+              <label for="user-weight" class="calc-label">현재 체중 입력 (kg)</label>
+              <input type="number" id="user-weight" class="calc-input" placeholder="예: 65" min="20" max="200" required>
+            </div>
+            <button type="submit" class="calc-btn" id="btn-calculate">수분 섭취 기준량 확인하기</button>
+          </form>
+
+          <div class="calc-result-box" id="calc-result-box">
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary-color); margin-bottom: 6px;">나의 하루 권장 수분 섭취량</div>
+            <div class="calc-result-value" id="calc-result-value">2.0L</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+              (일반적인 머그잔 기준 <strong>약 <span id="target-glasses-approx">8</span>잔</strong> 분량입니다.)
+            </div>
+            <p style="color: var(--accent-color); font-size: 0.85rem; margin-top: 10px; font-weight: 600;">
+              ※ 아래 챌린저 도구에 맞춤 목표가 실시간 반영되었습니다!
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Water Tracker -->
+        <div class="tracker-card" id="water-tracker">
+          <h3 class="track-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            오늘의 물 마시기 트래커
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">한 잔(250mL)의 물을 마실 때마다 아래의 '물 한 잔 추가' 버튼을 눌러 기록해보세요. 시각적 물컵이 채워지며 목표를 향해 나아갑니다.</p>
+          
+          <div class="tracker-display" id="tracker-visualization">
+            <!-- Smooth Liquid Glass SVG -->
+            <svg class="water-glass-svg" viewBox="0 0 160 180" id="cup-svg">
+              <defs>
+                <!-- Water Liquid Gradient -->
+                <linearGradient id="water-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#00D2D3" />
+                  <stop offset="100%" stop-color="#00A8FF" />
+                </linearGradient>
+                <!-- Glass Outline Mask -->
+                <clipPath id="glass-inner-clip">
+                  <path d="M35 30 L125 30 L115 150 A10 10 0 0 1 105 160 L55 160 A10 10 0 0 1 45 150 Z" />
+                </clipPath>
+              </defs>
+              
+              <!-- Glass Background (Inner) -->
+              <path d="M35 30 L125 30 L115 150 A10 10 0 0 1 105 160 L55 160 A10 10 0 0 1 45 150 Z" fill="rgba(10, 61, 98, 0.03)" stroke="rgba(10, 61, 98, 0.1)" stroke-width="2" />
+              
+              <!-- Dynamic Water Liquid (Clipped to glass shape) -->
+              <g clip-path="url(#glass-inner-clip)">
+                <!-- Target y values: 150 (empty) to 30 (full). Initial state: empty (y=150, height=0) -->
+                <rect id="water-level-rect" x="20" y="150" width="120" height="0" fill="url(#water-gradient)" class="water-level" />
+                <!-- Subtle Wave Overlay -->
+                <path d="M 20 150 Q 50 145 80 150 T 140 150 L 140 170 L 20 170 Z" fill="rgba(255,255,255,0.15)" />
+              </g>
+
+              <!-- Glass Outer Shading/Reflection -->
+              <path d="M35 30 L125 30 L115 150 A10 10 0 0 1 105 160 L55 160 A10 10 0 0 1 45 150 Z" fill="none" stroke="var(--primary-color)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Highlight Reflection line -->
+              <path d="M42 35 L48 145" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="tracker-stats" id="tracker-stats-output">
+            현재 섭취량: <span id="current-glasses">0</span> 잔 (<span id="current-volume">0.00</span>L) / 목표 섭취량: <span id="target-intake">2.0</span>L
+          </div>
+
+          <div class="tracker-buttons">
+            <button class="track-add-btn" id="btn-add-water">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline; vertical-align:middle; margin-right:4px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              물 한 잔 추가 (250mL)
+            </button>
+            <button class="track-reset-btn" id="btn-reset-water">리셋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Campaign Lightbox Zoom Modal --- -->
+  <div class="lightbox-modal" id="campaign-lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="확대 보기 닫기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        닫기
+      </button>
+      <img src="카드뉴스.png" alt="물 마시기 카드뉴스 원본 이미지" class="lightbox-img" id="lightbox-image">
+    </div>
+  </div>
+
+  <!-- --- Footer --- -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About B-Tech -->
+        <div class="footer-info-col" id="footer-about">
+          <h3>
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke-dasharray="10 5" />
+              <path d="M50,15 L50,85 M15,50 L85,50" />
+            </svg>
+            (주)비에이텍
+          </h3>
+          <p>
+            (주)비에이텍은 다년간 축적된 숙련된 엔지니어링 기술력과 엄격한 ISO 품질경영 매뉴얼을 바탕으로 최상급 워터 펌프 제작, 설치, 수리 정비를 담당하는 공공 조달 강소기업입니다.
+          </p>
+          <div class="footer-socials" id="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="블로그"><svg viewBox="0 0 24 24"><path d="M2 12a10 10 0 1 1 10 10A10 10 0 0 1 2 12zm10-5v10m-5-5h10"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="유튜브"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-links-col" id="footer-sitemap">
+          <h4>사이트맵</h4>
+          <ul class="footer-links-list">
+            <li><a href="company.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>회사소개</a></li>
+            <li><a href="products.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>제품안내</a></li>
+            <li><a href="technology.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>기술 및 인증</a></li>
+            <li><a href="performance.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>사업실적</a></li>
+            <li><a href="campaign.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>캠페인</a></li>
+            <li><a href="support.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>고객지원</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-contact-col" id="footer-contact-details">
+          <h4>고객센터 및 오시는 길</h4>
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>강원특별자치도 춘천시 퇴계공단 2길 64 (주)비에이텍</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>대표전화: 033-264-9243 | 팩스: 033-251-5747</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>이메일: contact@batechpump.co.kr</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>상담 가능 시간: 평일 09:00 ~ 18:00 (토/일, 공휴일 휴무)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="footer-base">
+        <div>&copy; 2026 (주)비에이텍. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="company.html#location-section">오시는 길</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Local script to update glasses approximation when weight is submitted
+    document.getElementById('water-calc-form').addEventListener('submit', function() {
+      const weight = parseFloat(document.getElementById('user-weight').value);
+      if(!isNaN(weight) && weight > 0) {
+        const recommendedMl = Math.round(weight * 30);
+        document.getElementById('target-glasses-approx').textContent = Math.round(recommendedMl / 250);
+      }
+    });
+  </script>
+
+</body>
+</html>
+커밋

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="(주)비에이텍은 워터펌프 제작, 설치, 수리 전문 기업입니다. 춘천 퇴계공단에 위치하며 최고의 기술력으로 공공기관 및 대기업에 납품합니다.">
+  <title>(주)비에이텍 - 워터펌프 전문 제조, 설치 및 수리</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- --- Header / Navigation --- -->
+  <header class="header" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" stroke-dasharray="15 5" />
+          <circle cx="50" cy="50" r="28" stroke-dasharray="5 2" />
+          <path d="M50,15 L50,35 M50,65 L50,85 M15,50 L35,50 M65,50 L85,50" />
+          <circle cx="50" cy="50" r="10" fill="currentColor" />
+        </svg>
+        <span>(주)비에이텍</span>
+      </a>
+      
+      <nav class="nav-menu" id="header-nav-menu">
+        <div class="nav-item active"><a href="index.html" class="nav-link" id="nav-home">홈</a></div>
+        <div class="nav-item"><a href="company.html" class="nav-link" id="nav-company">회사소개</a></div>
+        <div class="nav-item"><a href="products.html" class="nav-link" id="nav-products">제품안내</a></div>
+        <div class="nav-item"><a href="technology.html" class="nav-link" id="nav-tech">기술 및 인증</a></div>
+        <div class="nav-item"><a href="performance.html" class="nav-link" id="nav-perf">사업실적</a></div>
+        <div class="nav-item"><a href="campaign.html" class="nav-link" id="nav-campaign">캠페인</a></div>
+        <div class="nav-item"><a href="support.html" class="nav-link" id="nav-support">고객지원</a></div>
+        <a href="support.html#inquiry-form-section" class="nav-cta" id="nav-cta-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          온라인 견적 문의
+        </a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="메뉴 열기/닫기" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- --- Hero Section --- -->
+  <section class="hero" id="hero-banner">
+    <div class="hero-bg-waves">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag" id="hero-badge">Water Pump Specialist</span>
+        <h1 class="hero-title" id="hero-heading">
+          물의 흐름을 바꾸는<br>
+          <span>혁신적인 워터 펌프 기술</span>
+        </h1>
+        <p class="hero-desc" id="hero-description">
+          (주)비에이텍은 다년간 축적된 정밀 엔지니어링 노하우를 바탕으로 산업용, 농업용, 공공 시설용 고효율 펌프를 직접 설계, 제작, 설치 및 수리하는 종합 수처리 솔루션 파트너입니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="products.html" class="btn btn-primary" id="hero-btn-products">
+            제품 카탈로그 보기
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="company.html" class="btn btn-secondary" id="hero-btn-company">회사소개</a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="hero-image-glow"></div>
+        <!-- Premium Stylized SVG Technical Drawing of a Turbine Pump Impeller -->
+        <svg class="hero-pump-3d" viewBox="0 0 300 300" id="hero-turbine-svg" aria-label="터빈 펌프 임펠러 설계도">
+          <defs>
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#00A8FF" stop-opacity="0.3" />
+              <stop offset="70%" stop-color="#0A3D62" stop-opacity="0.1" />
+              <stop offset="100%" stop-color="#0A3D62" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="metal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3C6382" />
+              <stop offset="50%" stop-color="#0A3D62" />
+              <stop offset="100%" stop-color="#072A43" />
+            </linearGradient>
+          </defs>
+          <circle cx="150" cy="150" r="140" fill="url(#grad1)" stroke="#00A8FF" stroke-width="1" stroke-dasharray="10 5" />
+          <circle cx="150" cy="150" r="120" stroke="rgba(0, 168, 255, 0.4)" stroke-width="2" />
+          <circle cx="150" cy="150" r="90" fill="none" stroke="url(#metal-grad)" stroke-width="12" />
+          <!-- Impeller Blades -->
+          <g id="blades" stroke="url(#metal-grad)" stroke-width="8" stroke-linecap="round" fill="none">
+            <path d="M150,60 C180,60 210,90 210,120" />
+            <path d="M240,150 C240,180 210,210 180,210" />
+            <path d="M150,240 C120,240 90,210 90,180" />
+            <path d="M60,150 C60,120 90,90 120,90" />
+            
+            <path d="M150,75 C170,75 190,95 190,115" />
+            <path d="M225,150 C225,170 205,190 185,190" />
+            <path d="M150,225 C130,225 110,205 110,185" />
+            <path d="M75,150 C75,130 95,110 115,110" />
+          </g>
+          <!-- Center Shaft -->
+          <circle cx="150" cy="150" r="30" fill="#0A3D62" stroke="#00A8FF" stroke-width="3" />
+          <circle cx="150" cy="150" r="10" fill="#00D2D3" />
+          <!-- Tech grids overlay -->
+          <line x1="10" y1="150" x2="290" y2="150" stroke="rgba(0, 168, 255, 0.2)" stroke-width="1" stroke-dasharray="2 2" />
+          <line x1="150" y1="10" x2="150" y2="290" stroke="rgba(0, 168, 255, 0.2)" stroke-width="1" stroke-dasharray="2 2" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Stats Bar --- -->
+  <section class="container" style="position: relative; z-index: 20;" id="stats-section">
+    <div class="stats-bar" id="stats-highlight-bar">
+      <div class="stat-item">
+        <div class="stat-number">2010년</div>
+        <div class="stat-label">회사 설립년도</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,200건+</div>
+        <div class="stat-label">누적 펌프 시공 및 수리</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15곳+</div>
+        <div class="stat-label">협력 지자체 및 정부기관</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">99.8%</div>
+        <div class="stat-label">고객 서비스 만족도</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Services Highlight Section --- -->
+  <section class="section section-light" id="services-highlight">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" id="services-subtitle">Core Capabilities</span>
+        <h2 class="section-title" id="services-title">B-Tech 핵심 비즈니스 부문</h2>
+        <p class="section-desc" id="services-desc">워터펌프 전 공정을 아우르는 맞춤 엔지니어링 설계와 신속한 시공 및 유지보수로 최고의 수처리 성능을 약속합니다.</p>
+      </div>
+      
+      <div class="feature-grid" id="services-grid">
+        <!-- Feature 1: Company -->
+        <div class="feature-card" id="feat-company">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 10V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M8 21v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4"/></svg>
+          </div>
+          <h3 class="feature-card-title">회사소개</h3>
+          <p class="feature-card-desc">조세연 대표이사의 고객 만족 및 품질 최우선 경영 철학과 2010년 설립 이후의 탄탄한 마일스톤 연혁을 확인하세요.</p>
+          <a href="company.html" class="feature-card-link">자세히 보기 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+
+        <!-- Feature 2: Products -->
+        <div class="feature-card" id="feat-products">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10zM2 12h20"/></svg>
+          </div>
+          <h3 class="feature-card-title">제품 안내</h3>
+          <p class="feature-card-desc">다단, 단단, 양흡입 벌류트 펌프부터 고정밀 산업/특수 펌프까지 용도별 완벽한 펌프 라인업의 상세 사양을 확인하세요.</p>
+          <a href="products.html" class="feature-card-link">자세히 보기 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+
+        <!-- Feature 3: Technology -->
+        <div class="feature-card" id="feat-tech">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="feature-card-title">기술 및 인증</h3>
+          <p class="feature-card-desc">ISO 9001:2015 품질경영인증, Venture 기업 확인 및 조달 시장 직접생산확인 등 신뢰할 수 있는 독보적 기술력의 지표입니다.</p>
+          <a href="technology.html" class="feature-card-link">자세히 보기 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+
+        <!-- Feature 4: Performance -->
+        <div class="feature-card" id="feat-perf">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="feature-card-title">사업 실적</h3>
+          <p class="feature-card-desc">춘천시, 홍천군 등 강원특별자치도 지자체 상수도 및 하수처리 시설의 실제 시공 내역과 고해상도 설치 현장을 소개합니다.</p>
+          <a href="performance.html" class="feature-card-link">자세히 보기 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+
+        <!-- Feature 5: Support -->
+        <div class="feature-card" id="feat-support">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="feature-card-title">고객 지원</h3>
+          <p class="feature-card-desc">신속한 견적 및 개보수 상담 신청을 위한 온라인 문의 폼과 최신 제품 카탈로그 및 기술 매뉴얼 라이브러리를 운영하고 있습니다.</p>
+          <a href="support.html" class="feature-card-link">자세히 보기 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+
+        <!-- Feature 6: Quick Call -->
+        <div class="feature-card" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%); color: var(--text-light);" id="feat-quick-call">
+          <div class="feature-icon-wrapper" style="background-color: rgba(255, 255, 255, 0.15); color: var(--text-light);">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="feature-card-title" style="color: var(--text-light);">빠른 전화 상담</h3>
+          <p class="feature-card-desc" style="color: rgba(255, 255, 255, 0.8);">긴급 수리 보수 및 대량 구매, 설치 관련 문의는 B-Tech의 전문 현장 엔지니어가 실시간으로 상담해 드립니다.</p>
+          <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; margin-top: auto;">
+            <a href="tel:033-264-9243" class="feature-card-link" style="color: var(--accent-color);">033-264-9243 <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <a href="http://pf.kakao.com/_AeHXX/chat" target="_blank" rel="noopener noreferrer" class="btn-kakaotalk" id="kakaotalk-counsel-btn" style="width: 100%; box-sizing: border-box;">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12,2C6.5,2,2,5.6,2,10c0,2.8,1.8,5.3,4.5,6.6l-1,3.7c-0.1,0.5,0.4,0.9,0.9,0.7l4.3-2.6c0.4,0.1,0.8,0.1,1.3,0.1c5.5,0,10-3.6,10-8S17.5,2,12,2z"/>
+              </svg>
+              카카오톡 상담하기
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Corporate Philosophy Banner --- -->
+  <section class="section section-white" id="philosophy-section">
+    <div class="container">
+      <div class="company-intro-grid">
+        <div class="intro-content">
+          <span class="section-subtitle" style="text-align: left;" id="philosophy-subtitle">Corporate Philosophy</span>
+          <h2 class="section-title" style="text-align: left; font-size: 2.3rem; margin-bottom: 24px;" id="philosophy-title">
+            "물 한 방울의 가치를 소중히,<br>최상의 기술로 사회에 공헌합니다."
+          </h2>
+          <p class="ceo-message" id="philosophy-quote">
+            "품질 우선, 고객 만족, 기술 혁신이라는 삼대 핵심 원칙 하에, 비에이텍은 단순한 기계 장치 공급을 넘어 안정적이고 친환경적인 완벽한 수자원 인프라 구축을 목표로 달려왔습니다. 끊임없는 신뢰를 바탕으로 지역 사회와 국가 기관의 지속 가능한 발전을 뒷받침하겠습니다."
+          </p>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 32px;" id="philosophy-author">
+            <strong>(주)비에이텍 대표이사 조세연</strong>
+          </p>
+          <a href="company.html" class="btn btn-primary" id="philosophy-btn">회사 소개 및 연혁 보기</a>
+        </div>
+        <div class="intro-visual" style="display: flex; justify-content: center; position: relative;">
+          <!-- Stylized Water Treatment Diagram -->
+          <svg viewBox="0 0 350 350" style="width: 100%; max-width: 380px; height: auto;" id="philosophy-visual-svg">
+            <rect width="350" height="350" rx="24" fill="var(--bg-color)" />
+            <circle cx="175" cy="175" r="120" fill="none" stroke="rgba(0, 168, 255, 0.15)" stroke-width="4" stroke-dasharray="10 5" />
+            
+            <!-- Custom Fluid SVG nodes showing water flow -->
+            <path d="M70,175 Q120,120 175,175 T280,175" fill="none" stroke="var(--accent-color)" stroke-width="4" stroke-linecap="round" />
+            <path d="M70,205 Q125,250 175,205 T280,205" fill="none" stroke="var(--secondary-color)" stroke-width="3" stroke-linecap="round" />
+            
+            <!-- Nodes representing Water cycle and Pressure system -->
+            <circle cx="70" cy="175" r="10" fill="var(--primary-color)" />
+            <circle cx="175" cy="175" r="14" fill="#00D2D3" stroke="var(--bg-color)" stroke-width="3" />
+            <circle cx="280" cy="175" r="10" fill="var(--primary-color)" />
+            <circle cx="175" cy="205" r="8" fill="var(--accent-color)" />
+
+            <!-- Labels in graphic -->
+            <text x="70" y="150" font-family="'Outfit', sans-serif" font-size="12" fill="var(--primary-color)" font-weight="700" text-anchor="middle">INLET</text>
+            <text x="175" y="145" font-family="'Outfit', sans-serif" font-size="12" fill="var(--accent-color)" font-weight="800" text-anchor="middle">BOOSTER</text>
+            <text x="280" y="150" font-family="'Outfit', sans-serif" font-size="12" fill="var(--primary-color)" font-weight="700" text-anchor="middle">OUTLET</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About B-Tech -->
+        <div class="footer-info-col" id="footer-about">
+          <h3>
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke-dasharray="10 5" />
+              <path d="M50,15 L50,85 M15,50 L85,50" />
+            </svg>
+            (주)비에이텍
+          </h3>
+          <p>
+            (주)비에이텍은 다년간 축적된 숙련된 엔지니어링 기술력과 엄격한 ISO 품질경영 매뉴얼을 바탕으로 최상급 워터 펌프 제작, 설치, 수리 정비를 담당하는 공공 조달 강소기업입니다.
+          </p>
+          <div class="footer-socials" id="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="블로그"><svg viewBox="0 0 24 24"><path d="M2 12a10 10 0 1 1 10 10A10 10 0 0 1 2 12zm10-5v10m-5-5h10"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="유튜브"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-links-col" id="footer-sitemap">
+          <h4>사이트맵</h4>
+          <ul class="footer-links-list">
+            <li><a href="company.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>회사소개</a></li>
+            <li><a href="products.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>제품안내</a></li>
+            <li><a href="technology.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>기술 및 인증</a></li>
+            <li><a href="performance.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>사업실적</a></li>
+            <li><a href="campaign.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>캠페인</a></li>
+            <li><a href="support.html"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>고객지원</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-contact-col" id="footer-contact-details">
+          <h4>고객센터 및 오시는 길</h4>
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>강원특별자치도 춘천시 퇴계공단 2길 64 (주)비에이텍</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>대표전화: 033-264-9243 | 팩스: 033-251-5747</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>이메일: contact@batechpump.co.kr</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>상담 가능 시간: 평일 09:00 ~ 18:00 (토/일, 공휴일 휴무)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="footer-base">
+        <div>&copy; 2026 (주)비에이텍. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="company.html#location-section">오시는 길</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
